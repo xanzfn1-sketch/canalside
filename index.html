@@ -3,6 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Outdoor adventure on the canal bank in Mill Hill, Blackburn — canoeing, archery, axe throwing and bushcraft, run by volunteers for youth and community groups.">
+<meta property="og:title" content="Canalside Activity and Environment Centre">
+<meta property="og:description" content="Outdoor adventure on the canal bank in Mill Hill, Blackburn — run by volunteers, for everyone.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0d1912">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230d1912'/%3E%3Cpath d='M14 36c6-6 12-6 18 0s12 6 18 0' stroke='%23e3a83f' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
 <title>Canalside Activity and Environment Centre — Mill Hill, Blackburn</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -24,8 +30,16 @@
     --mono: 'IBM Plex Mono', monospace;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{ background:var(--parchment); color:var(--ink); font-family:var(--sans); overflow-x:hidden; }
+  html{scroll-behavior:smooth; scroll-padding-top:90px;}
+  body{ background:var(--parchment); color:var(--ink); font-family:var(--sans); overflow-x:hidden; position:relative; }
+
+  body::after{
+    content:''; position:fixed; inset:0; z-index:200; pointer-events:none;
+    opacity:0.035; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size:120px 120px;
+  }
+
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
     .leaf{ opacity:0 !important; }
@@ -33,37 +47,71 @@
     .marquee-track{ animation:none !important; }
     .marquee-track .copy2{ display:none !important; }
     .glow-cursor{ display:none !important; }
+    .scroll-cue{ display:none !important; }
     .kinetic-title .row2{ text-shadow:0 0 40px rgba(227,168,63,0.35) !important; }
   }
   a{color:inherit;text-decoration:none;}
   ::selection{ background:var(--amber); color:var(--forest-black); }
   :focus-visible{ outline:2px solid var(--brick); outline-offset:3px; }
   .wrap{ max-width:1160px; margin:0 auto; padding:0 40px; }
+  @media (max-width:600px){ .wrap{ padding:0 22px; } }
 
   /* NAV */
   nav{
     position:fixed; top:0; left:0; right:0; z-index:80;
     display:flex; justify-content:space-between; align-items:center;
     padding:20px 40px;
-    background: rgba(13,25,18,0.85);
+    background: rgba(13,25,18,0.88);
     backdrop-filter: blur(8px);
     color: var(--parchment);
   }
   nav .mark{ font-family:var(--grotesk); font-weight:700; font-size:1.05rem; letter-spacing:0.01em; display:flex; align-items:center; gap:10px;}
   nav .mark .dot{ width:9px; height:9px; border-radius:50%; background:var(--amber); box-shadow:0 0 12px var(--amber); }
+  .nav-right{ display:flex; align-items:center; gap:30px; }
   nav .links{ display:flex; gap:28px; font-size:0.85rem; font-weight:500; }
   nav .links a{ opacity:0.85; transition:opacity .2s, color .2s; }
   nav .links a:hover{ opacity:1; color:var(--amber); }
   nav .book{
-    background:var(--brick); color:#fff; padding:9px 18px; border-radius:4px;
+    background:var(--brick); color:#fff; padding:11px 20px; border-radius:4px;
     font-weight:600; font-size:0.82rem; transition:transform .25s, background .25s, box-shadow .25s;
+    white-space:nowrap;
   }
   nav .book:hover{ background:#d16c4a; transform:translateY(-1px); box-shadow:0 8px 20px -6px rgba(193,95,63,0.6); }
-  @media (max-width:800px){ nav .links{ display:none; } }
+
+  .menu-btn{
+    display:none; flex-direction:column; justify-content:center; gap:5px;
+    width:40px; height:40px; background:none; border:none; cursor:pointer; padding:8px;
+  }
+  .menu-btn span{ display:block; width:100%; height:2px; background:var(--parchment); border-radius:2px; transition: transform .3s, opacity .3s; }
+  .menu-btn[aria-expanded="true"] span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+  .menu-btn[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+  .menu-btn[aria-expanded="true"] span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+
+  .mobile-menu{
+    position:fixed; top:0; left:0; right:0; z-index:70;
+    padding:82px 24px 26px;
+    background: rgba(13,25,18,0.98); backdrop-filter:blur(10px);
+    display:flex; flex-direction:column;
+    transform: translateY(-14px); opacity:0; pointer-events:none;
+    transition: transform .3s ease, opacity .3s ease;
+    border-bottom:1px solid rgba(239,230,212,0.1);
+  }
+  .mobile-menu.open{ transform:translateY(0); opacity:1; pointer-events:auto; }
+  .mobile-menu a{ padding:14px 4px; font-size:1.05rem; color:var(--parchment); border-bottom:1px solid rgba(239,230,212,0.08); }
+  .mobile-menu a:last-child{ border-bottom:none; }
+  @media (min-width:801px){ .mobile-menu{ display:none; } }
+
+  @media (max-width:800px){
+    nav{ padding:16px 20px; }
+    nav .links{ display:none; }
+    .nav-right{ gap:14px; }
+    .menu-btn{ display:flex; }
+  }
 
   /* HERO */
   .hero{
-    position:relative; min-height:100vh; display:flex; flex-direction:column; justify-content:center;
+    position:relative; min-height:100vh; min-height:100dvh;
+    display:flex; flex-direction:column; justify-content:center;
     background: radial-gradient(ellipse 100% 60% at 50% 0%, #1c3322 0%, var(--forest-deep) 45%, var(--forest-black) 100%);
     color: var(--parchment); overflow:hidden;
   }
@@ -86,8 +134,7 @@
   .shaft{
     position:absolute; top:-10%; width:140px; height:130%;
     background: linear-gradient(180deg, rgba(227,168,63,0.14), transparent 75%);
-    transform: rotate(10deg);
-    filter: blur(2px);
+    transform: rotate(10deg); filter: blur(2px);
     animation: shaftPulse 7s ease-in-out infinite;
   }
   .shaft.s1{ left:12%; animation-delay:0s; }
@@ -97,14 +144,14 @@
 
   .leaf{
     position:absolute; top:-40px; font-size:1.1rem; opacity:0.85;
-    animation: leafFall linear infinite;
-    color: var(--amber);
+    animation: leafFall linear infinite; color: var(--amber);
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
   }
   @keyframes leafFall{
     0%{ transform: translate(0,0) rotate(0deg); }
     100%{ transform: translate(var(--drift,40px), 115vh) rotate(340deg); }
   }
+  @media (max-width:600px){ .leaf{ display:none; } }
 
   .water{ position:absolute; inset:0; opacity:0.9; pointer-events:none; z-index:0; }
   .water svg{ position:absolute; bottom:-2px; width:100%; }
@@ -112,12 +159,17 @@
   @keyframes ripple{ 0%,100%{ transform: translateX(0); } 50%{ transform: translateX(-40px); } }
 
   .hero-inner{ position:relative; z-index:3; padding:150px 0 90px; }
+  @media (max-width:600px){ .hero-inner{ padding:118px 0 60px; } }
+
   .eyebrow{
-    font-family:var(--mono); font-size:0.78rem; letter-spacing:0.08em; color:var(--amber);
-    display:flex; align-items:center; gap:12px; margin-bottom:22px;
+    position:relative; display:inline-block; max-width:100%;
+    font-family:var(--mono); font-size:0.78rem; letter-spacing:0.06em; color:var(--amber);
+    padding-left:38px; margin-bottom:22px;
     opacity:0; animation: riseIn .8s ease forwards; animation-delay:.1s;
   }
-  .eyebrow::before{ content:''; width:26px; height:1px; background:var(--amber); }
+  .eyebrow::before{ content:''; position:absolute; left:0; top:50%; width:26px; height:1px; background:var(--amber); transform:translateY(-50%); }
+  .eyebrow .short{ display:none; }
+  @media (max-width:480px){ .eyebrow .full{ display:none; } .eyebrow .short{ display:inline; } }
 
   .kinetic-title{ display:flex; flex-direction:column; line-height:0.92; margin-bottom:26px; }
   .kinetic-title .row1{ display:flex; gap:22px; font-family:var(--grotesk); font-weight:600; font-size:clamp(1.6rem,4vw,2.6rem); letter-spacing:0.02em; color:var(--parchment-dim); }
@@ -126,6 +178,10 @@
     color:var(--amber); letter-spacing:-0.02em;
     text-shadow: 0 0 50px rgba(227,168,63,0.25);
     animation: titleGlow 4s ease-in-out infinite;
+  }
+  @media (max-width:380px){
+    .kinetic-title .row1{ font-size:clamp(1.3rem,4.5vw,2.6rem); gap:14px; }
+    .kinetic-title .row2{ font-size:clamp(2.6rem,17vw,10rem); }
   }
   @keyframes titleGlow{
     0%,100%{ text-shadow:0 0 30px rgba(227,168,63,0.2); }
@@ -158,6 +214,18 @@
     padding-bottom:3px; transition:border-color .25s;
   }
   .btn-ghost:hover{ border-color:var(--amber); }
+  @media (max-width:420px){
+    .hero-cta{ flex-direction:column; align-items:flex-start; gap:16px; }
+    .btn-primary{ width:100%; text-align:center; }
+  }
+
+  .scroll-cue{ position:absolute; bottom:26px; left:50%; transform:translateX(-50%); z-index:2;
+    display:flex; flex-direction:column; align-items:center; gap:8px; opacity:0.7; }
+  .scroll-cue .line{ width:1px; height:34px; background:linear-gradient(180deg, var(--amber), transparent); position:relative; overflow:hidden; }
+  .scroll-cue .line::after{ content:''; position:absolute; top:-100%; left:0; width:100%; height:100%; background:var(--amber); animation: cueDrop 2.4s ease-in-out infinite; }
+  @keyframes cueDrop{ 0%{ top:-100%; } 60%{ top:100%; } 100%{ top:100%; } }
+  .scroll-cue .label{ font-family:var(--mono); font-size:0.6rem; letter-spacing:0.12em; color:var(--parchment-dim); }
+  @media (max-width:680px){ .scroll-cue{ display:none; } }
 
   /* MARQUEE RIBBON */
   .marquee{
@@ -175,6 +243,10 @@
   }
   .marquee-track span{ padding:0 26px; }
   @keyframes marqueeScroll{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+  @media (max-width:600px){
+    .marquee{ transform: rotate(-1.4deg) scale(1.0); margin:-24px 0 -24px; }
+    .marquee-track{ font-size:0.78rem; padding:10px 0; }
+  }
 
   /* STATS STRIP */
   .stats{
@@ -185,6 +257,7 @@
   .stat b{ display:block; font-family:var(--mono); font-size:2.1rem; color:var(--brick); }
   .stat span{ font-size:0.82rem; color:#4a5148; }
   @media (max-width:800px){ .stats .wrap{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:420px){ .stat b{ font-size:1.7rem; } }
 
   .section-label{
     font-family:var(--mono); font-size:0.78rem; letter-spacing:0.06em; color:var(--brick);
@@ -196,6 +269,7 @@
   /* ABOUT */
   .about{ padding:110px 0 100px; }
   .about-grid{ display:grid; grid-template-columns:1fr 1.15fr; gap:70px; align-items:start; }
+  @media (max-width:860px){ .about{ padding:80px 0 70px; } .about-grid{ grid-template-columns:1fr; gap:38px; } }
   .about h2{ font-family:var(--grotesk); font-weight:700; font-size:clamp(1.9rem,3.2vw,2.5rem); line-height:1.15; }
   .about-copy{ font-size:1.02rem; line-height:1.7; color:#3a4139; display:flex; flex-direction:column; gap:20px; }
   .about-copy strong{ color:var(--ink); }
@@ -207,6 +281,7 @@
 
   /* TOWPATH / ACTIVITIES */
   .path-section{ background: linear-gradient(160deg, var(--forest-deep), var(--forest-black)); color:var(--parchment); padding:120px 0 100px; position:relative; }
+  @media (max-width:600px){ .path-section{ padding:80px 0 70px; } }
   .path-head{ max-width:600px; margin-bottom:60px; }
   .path-head h2{ font-family:var(--grotesk); font-weight:700; font-size:clamp(1.9rem,3.4vw,2.6rem); line-height:1.15; }
   .path-head p{ margin-top:16px; color:var(--parchment-dim); line-height:1.6; font-size:0.98rem; }
@@ -214,25 +289,23 @@
   .towpath{ position:relative; }
   .towpath svg.route{ position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; }
   .route-path{
-    stroke-dasharray: 1400;
-    stroke-dashoffset: 1400;
+    stroke-dasharray: 1400; stroke-dashoffset: 1400;
     transition: stroke-dashoffset 2.2s cubic-bezier(.2,.8,.2,1);
   }
   .towpath.drawn .route-path{ stroke-dashoffset: 0; }
   .route-path.ambient{ animation: dashMarch 30s linear infinite; }
   @keyframes dashMarch{ to{ stroke-dashoffset: -1000; } }
 
-  .activity-grid{
-    display:grid; grid-template-columns:repeat(4,1fr); gap: 28px 22px;
-    position:relative; z-index:1;
-  }
+  .activity-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap: 28px 22px; position:relative; z-index:1; }
   .activity{
     background: rgba(239,230,212,0.06); border:1px solid rgba(239,230,212,0.14);
     border-radius:8px; padding:24px 20px; transition: transform .15s ease-out, background .3s, border-color .3s;
     transform-style: preserve-3d; will-change: transform;
   }
   .activity:hover{ background:rgba(239,230,212,0.1); border-color:var(--amber); }
-  .activity .glyph{ font-size:1.6rem; margin-bottom:14px; display:block; }
+  .activity .glyph{ display:inline-flex; margin-bottom:14px; }
+  .activity .glyph svg{ width:30px; height:30px; color:var(--amber); transition: color .3s, transform .3s; }
+  .activity:hover .glyph svg{ color:#f0c66a; transform: translateY(-2px) scale(1.06); }
   .activity h3{ font-family:var(--grotesk); font-weight:600; font-size:1.05rem; margin-bottom:6px; }
   .activity p{ font-size:0.85rem; color:var(--parchment-dim); line-height:1.5; }
   @media (max-width:900px){ .activity-grid{ grid-template-columns:repeat(2,1fr); } }
@@ -240,6 +313,7 @@
 
   /* GROUPS */
   .groups{ padding:120px 0 100px; }
+  @media (max-width:600px){ .groups{ padding:80px 0 70px; } }
   .groups-head{ max-width:600px; margin-bottom:56px; }
   .groups-head h2{ font-family:var(--grotesk); font-weight:700; font-size:clamp(1.9rem,3.4vw,2.6rem); line-height:1.15; }
   .group-cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; }
@@ -255,34 +329,33 @@
   @media (max-width:860px){ .group-cards{ grid-template-columns:1fr; } }
 
   /* PARTNERSHIP */
-  .partner{
-    background: var(--meadow); color:#fff; padding:90px 0; text-align:center;
-    position:relative; overflow:hidden;
-  }
+  .partner{ background: var(--meadow); color:#fff; padding:90px 0; text-align:center; position:relative; overflow:hidden; }
+  @media (max-width:600px){ .partner{ padding:64px 0; } }
   .partner .wrap{ max-width:700px; position:relative; z-index:1; }
   .partner h2{ font-family:var(--grotesk); font-weight:700; font-size:clamp(1.7rem,3.4vw,2.3rem); margin-bottom:18px; }
   .partner p{ line-height:1.7; opacity:0.95; }
 
   /* CLOSE / CONTACT */
   .close{ padding:130px 0 90px; text-align:center; }
+  @media (max-width:600px){ .close{ padding:80px 0 70px; } }
   .close h2{
     font-family:var(--grotesk); font-weight:700; font-size:clamp(2rem,4.6vw,3.1rem);
     max-width:700px; margin:0 auto 18px; line-height:1.12; color:var(--canal);
   }
   .close p.sub{ max-width:480px; margin:0 auto 40px; color:#4a5148; line-height:1.6; }
   .contact-grid{
-    display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:800px; margin:0 auto;
-    text-align:left;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:800px; margin:0 auto; text-align:left;
   }
   .contact-card{ background:#fff; border:1px solid rgba(27,36,31,0.08); border-radius:8px; padding:22px; }
   .contact-card .k{ font-family:var(--mono); font-size:0.72rem; color:var(--brick); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:8px; display:block; }
   .contact-card .v{ font-family:var(--grotesk); font-size:0.98rem; color:var(--ink); line-height:1.4; }
+  .contact-card .directions{ display:inline-block; margin-top:8px; font-family:var(--sans); font-size:0.82rem; font-weight:600; color:var(--canal); border-bottom:1px solid var(--canal); }
   @media (max-width:800px){ .contact-grid{ grid-template-columns:1fr; } }
 
   footer{
     background:var(--forest-black); color:var(--parchment-dim);
     padding:40px; display:flex; justify-content:space-between; align-items:center;
-    font-family:var(--mono); font-size:0.75rem; flex-wrap:wrap; gap:12px;
+    font-family:var(--mono); font-size:0.75rem; flex-wrap:wrap; gap:12px; text-align:center;
   }
   footer .socials{ display:flex; gap:16px; }
   footer .socials a{ color:var(--parchment-dim); transition:color .2s; }
@@ -293,14 +366,26 @@
 
 <nav>
   <div class="mark"><span class="dot"></span>Canalside</div>
-  <div class="links">
-    <a href="#activities">Activities</a>
-    <a href="#groups">Groups</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+  <div class="nav-right">
+    <div class="links">
+      <a href="#activities">Activities</a>
+      <a href="#groups">Groups</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="book" href="https://eu.jotform.com/app/251992623198367" target="_blank" rel="noopener">Book a session</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-  <a class="book" href="https://eu.jotform.com/app/251992623198367" target="_blank" rel="noopener">Book a session</a>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#activities">Activities</a>
+  <a href="#groups">Groups</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</div>
 
 <section class="hero" id="heroSection">
   <div class="glow-cursor" id="glowCursor"></div>
@@ -335,7 +420,10 @@
   </div>
 
   <div class="wrap hero-inner">
-    <div class="eyebrow">MILL HILL · BLACKBURN · LEEDS &amp; LIVERPOOL CANAL</div>
+    <div class="eyebrow">
+      <span class="full">MILL HILL · BLACKBURN · LEEDS &amp; LIVERPOOL CANAL</span>
+      <span class="short">MILL HILL, BLACKBURN</span>
+    </div>
     <h1 class="kinetic-title">
       <span class="row1"><span class="word">WE</span> <span class="word">ARE</span></span>
       <span class="row2"><span class="word">CANALSIDE</span></span>
@@ -345,6 +433,11 @@
       <a class="btn-primary" href="https://eu.jotform.com/app/251992623198367" target="_blank" rel="noopener">Book a session</a>
       <a class="btn-ghost" href="#activities">See what's on offer ↓</a>
     </div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true">
+    <span class="line"></span>
+    <span class="label">SCROLL</span>
   </div>
 </section>
 
@@ -395,14 +488,38 @@
           stroke="rgba(227,168,63,0.4)" stroke-width="2" fill="none"/>
       </svg>
       <div class="activity-grid">
-        <div class="activity fade-up"><span class="glyph">🛶</span><h3>Canoeing &amp; kayaking</h3><p>Straight onto the canal — the centre's original activity and still its heart.</p></div>
-        <div class="activity fade-up"><span class="glyph">🏹</span><h3>Archery</h3><p>Instructor-led target archery, suitable from age eight up.</p></div>
-        <div class="activity fade-up"><span class="glyph">🪓</span><h3>Axe throwing</h3><p>A firm favourite with our older youth groups.</p></div>
-        <div class="activity fade-up"><span class="glyph">🔥</span><h3>Bushcraft</h3><p>Fire-lighting, shelter building and woodland skills on site.</p></div>
-        <div class="activity fade-up"><span class="glyph">🎯</span><h3>Catapults &amp; shooting</h3><p>Air rifle and catapult sessions, run under close supervision.</p></div>
-        <div class="activity fade-up"><span class="glyph">🐸</span><h3>Pond dipping</h3><p>Our own dug pond — a favourite with younger visitors.</p></div>
-        <div class="activity fade-up"><span class="glyph">🚵</span><h3>Mountain biking</h3><p>On-site trails through the planted grounds.</p></div>
-        <div class="activity fade-up"><span class="glyph">🌳</span><h3>Environment &amp; growing</h3><p>Tree planting and growing sessions across our 2,200+ trees and shrubs.</p></div>
+        <div class="activity fade-up">
+          <span class="glyph"><svg viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21c3.5 3.5 8.5 5 12 5s8.5-1.5 12-5"/><path d="M9 10l14 12"/><path d="M9 10l-2.2-2.8"/><path d="M23 22l2.2 2.8"/></svg></span>
+          <h3>Canoeing &amp; kayaking</h3><p>Straight onto the canal — the centre's original activity and still its heart.</p>
+        </div>
+        <div class="activity fade-up">
+          <span class="glyph"><svg viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4c-5 5-5 19 0 24"/><path d="M9 16h18"/><path d="M23 11.5l4.5 4.5-4.5 4.5"/></svg></span>
+          <h3>Archery</h3><p>Instructor-led target archery, suitable from age eight up.</p>
+        </div>
+        <div class="activity fade-up">
+          <span class="glyph"><svg viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 27l9-18"/><path d="M20.5 9.5l5.5-3 3 5-5.5 3z"/></svg></span>
+          <h3>Axe throwing</h3><p>A firm favourite with our older youth groups.</p>
+        </div>
+        <div class="activity fade-up">
+          <span class="glyph"><svg viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 6c3 4.5-3 6-1 9.5 1 1.8 3.5 1 3.7-1 2 3 0 8.5-5 8.5s-7-4.5-4.7-8.5c1.2-2 3-2 2-8.5z"/><path d="M7 26h18"/></svg></span>
+          <h3>Bushcraft</h3><p>Fire-lighting, shelter building and woodland skills on site.</p>
+        </div>
+        <div class="activity fade-up">
+          <span class="glyph"><svg viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="10.5"/><circle cx="16" cy="16" r="6"/><circle cx="16" cy="16" r="1.5" fill="currentColor" stroke="none"/></svg></span>
+          <h3>Catapults &amp; shooting</h3><p>Air rifle and catapult sessions, run under close supervision.</p>
+        </div>
+        <div class="activity fade-up">
+          <span class="glyph"><svg viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13c3-3 6-3 9 0s6 3 9 0 6-3 6-3"/><path d="M4 19c3-3 6-3 9 0s6 3 9 0 6-3 6-3"/><path d="M4 25c3-3 6-3 9 0s6 3 9 0 6-3 6-3"/></svg></span>
+          <h3>Pond dipping</h3><p>Our own dug pond — a favourite with younger visitors.</p>
+        </div>
+        <div class="activity fade-up">
+          <span class="glyph"><svg viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="23" r="4.5"/><circle cx="23.5" cy="23" r="4.5"/><path d="M8.5 23l6.5-12h6"/><path d="M15 11l4.5 6h4"/><path d="M15 11l-3-4.5"/></svg></span>
+          <h3>Mountain biking</h3><p>On-site trails through the planted grounds.</p>
+        </div>
+        <div class="activity fade-up">
+          <span class="glyph"><svg viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 27V17"/><path d="M16 17c-4.5 0-7.5-3-7.5-3s2.5-5.5 7.5-5.5 7.5 5.5 7.5 5.5-3 3-7.5 3z"/><path d="M16 21c-3.5 0-5.5-2-5.5-2s1.8-3.5 5.5-3.5 5.5 3.5 5.5 3.5-2 2-5.5 2z"/></svg></span>
+          <h3>Environment &amp; growing</h3><p>Tree planting and growing sessions across our 2,200+ trees and shrubs.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -454,6 +571,7 @@
       <div class="contact-card">
         <span class="k">Find us</span>
         <span class="v">Acre House Barn, Mill Hill, Blackburn, BB2 4DD</span>
+        <a class="directions" href="https://www.google.com/maps/search/?api=1&query=Acre+House+Barn%2C+Mill+Hill%2C+Blackburn%2C+BB2+4DD" target="_blank" rel="noopener">Get directions →</a>
       </div>
       <div class="contact-card">
         <span class="k">Book online</span>
@@ -474,6 +592,25 @@
 <script>
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const coarsePointer = window.matchMedia('(pointer: coarse)').matches;
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
+    menuBtn.setAttribute('aria-expanded', String(!isOpen));
+    mobileMenu.classList.toggle('open', !isOpen);
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menuBtn.setAttribute('aria-expanded', 'false');
+    mobileMenu.classList.remove('open');
+  }));
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape'){
+      menuBtn.setAttribute('aria-expanded', 'false');
+      mobileMenu.classList.remove('open');
+    }
+  });
 
   // Scroll reveal
   const revealEls = document.querySelectorAll('.fade-up');
