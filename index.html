@@ -1,317 +1,391 @@
 <!DOCTYPE html>
-<html lang="en">
-<hea<meta name="google-site-verification" content="bCcujEKrOKT5YFsEDGta7O7ck1eaa83F4Dy9r0tSuuk" />
+<html lang="en-GB">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Home ed forest school in Blackburn for ages 4–14. Campfire cooking, dens, tools and mud at Canalside Activity Centre, run by a qualified forest school leader and primary teacher.">
+<meta name="description" content="A home ed forest school in Blackburn for ages 4–14. Real fires, dens, bushcraft and mud, led by a qualified forest school leader at Canalside, Mill Hill.">
 <meta property="og:title" content="Sticks and Worms — Home Ed Forest School, Blackburn">
-<meta property="og:description" content="Forest school for home educated children aged 4–14 in Blackburn. Fire, dens, mud and proper time outdoors.">
+<meta property="og:description" content="Fires, dens, bushcraft and mud for ages 4–14. A home ed forest school at Canalside, Blackburn.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#241a10">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23241a10'/%3E%3Cpath d='M14 42c0-8 10-8 10-16s10-8 10 0 10 8 10 14' stroke='%23f2c230' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#12241a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2312241a'/%3E%3Cpath d='M17 45L41 19' stroke='%23d2a878' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M30 33l9-3' stroke='%23d2a878' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M19 24c4-4 8 4 12 0s8 4 12 0' stroke='%23dd8b78' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
 <title>Sticks and Worms — Home Ed Forest School, Blackburn</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Nunito:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --soil:#241a10;
-    --soil-deep:#180f08;
-    --bark:#3b2a1b;
-    --moss:#5c7a3a;
-    --fern:#9cbf5a;
-    --buttercup:#f2c230;
-    --rust:#be4a2b;
-    --oat:#f6f0e2;
-    --oat-dim:#e6dcc4;
-    --display:'Bricolage Grotesque',sans-serif;
-    --body:'Nunito',sans-serif;
-    --mono:'Space Mono',monospace;
+    --forest:#12241a;
+    --forest-deep:#0c1912;
+    --pine:#20402a;
+    --moss:#5f7f45;
+    --fern:#8aa957;
+    --clay:#c15f3f;
+    --amber:#dfa049;
+    --worm:#dd8b78;
+    --paper:#f2ece0;
+    --paper-2:#e8dfcc;
+    --kraft:#d9c8a6;
+    --ink:#1b241c;
+    --ink-soft:#45503f;
+    --serif:'Fraunces',Georgia,serif;
+    --sans:'Inter',system-ui,sans-serif;
+    --mono:'IBM Plex Mono',monospace;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;scroll-padding-top:88px;}
-  body{background:var(--oat);color:var(--soil);font-family:var(--body);overflow-x:hidden;position:relative;}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);overflow-x:hidden;position:relative;line-height:1.55;}
 
   body::after{
     content:'';position:fixed;inset:0;z-index:200;pointer-events:none;opacity:.04;mix-blend-mode:multiply;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size:140px 140px;
   }
-
   @media (prefers-reduced-motion:reduce){
     *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
-    .float-bit{display:none !important;}
+    .leaf,.scroll-cue{display:none !important;}
+    .canopy-layer{transform:none !important;}
     .marquee-track{animation:none !important;}
-    .marquee-track .dupe{display:none !important;}
+    .marquee-track .copy2{display:none !important;}
   }
-
   a{color:inherit;text-decoration:none;}
-  ::selection{background:var(--buttercup);color:var(--soil);}
-  :focus-visible{outline:3px solid var(--rust);outline-offset:3px;}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 40px;}
-  @media (max-width:600px){.wrap{padding:0 20px;}}
+  ::selection{background:var(--amber);color:var(--forest-deep);}
+  :focus-visible{outline:2px solid var(--clay);outline-offset:3px;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 40px;}
+  @media (max-width:600px){.wrap{padding:0 22px;}}
 
-  .skip{position:absolute;left:-9999px;z-index:300;background:var(--buttercup);color:var(--soil);padding:12px 18px;font-weight:700;}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:-.01em;}
+  .lede{font-family:var(--serif);}
+
+  .skip{position:absolute;left:-9999px;top:0;z-index:300;background:var(--amber);color:var(--forest-deep);padding:12px 18px;font-weight:600;}
   .skip:focus{left:12px;top:12px;}
 
+  /* PRELOADER */
+  #preload{position:fixed;inset:0;z-index:300;background:var(--forest);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:opacity .6s,visibility .6s;}
+  #preload.done{opacity:0;visibility:hidden;}
+  #preload .pl-mark{font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--paper);letter-spacing:.01em;}
+  #preload svg{width:120px;}
+  #preload .pl-draw{stroke-dasharray:200;stroke-dashoffset:200;animation:plDraw 1.1s ease forwards;}
+  @keyframes plDraw{to{stroke-dashoffset:0;}}
+
+  #progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--amber);z-index:90;transition:width .1s linear;}
+
   /* NAV */
-  nav{
-    position:fixed;top:0;left:0;right:0;z-index:80;display:flex;justify-content:space-between;align-items:center;
-    padding:16px 40px;background:rgba(36,26,16,.94);backdrop-filter:blur(8px);color:var(--oat);
-  }
-  .nav-mark{font-family:var(--display);font-weight:800;font-size:1.06rem;display:flex;align-items:center;gap:9px;letter-spacing:-.01em;}
-  .nav-mark svg{width:26px;height:26px;color:var(--buttercup);}
-  .nav-right{display:flex;align-items:center;gap:26px;}
-  .nav-links{display:flex;gap:24px;font-size:.88rem;font-weight:600;}
-  .nav-links a{opacity:.86;transition:opacity .2s,color .2s;}
-  .nav-links a:hover{opacity:1;color:var(--buttercup);}
-  .nav-book{
-    background:var(--rust);color:#fff;padding:11px 20px;border-radius:999px;font-weight:700;font-size:.84rem;
-    white-space:nowrap;transition:transform .25s,background .25s,box-shadow .25s;
-  }
-  .nav-book:hover{background:#d15734;transform:translateY(-1px);box-shadow:0 8px 20px -6px rgba(190,74,43,.7);}
+  nav{position:fixed;top:0;left:0;right:0;z-index:80;display:flex;justify-content:space-between;align-items:center;padding:18px 40px;background:rgba(18,36,26,.92);backdrop-filter:blur(8px);color:var(--paper);}
+  .nav-mark{font-family:var(--serif);font-weight:600;font-size:1.12rem;display:flex;align-items:center;gap:10px;}
+  .nav-mark .dot{width:9px;height:9px;border-radius:50%;background:var(--amber);}
+  .nav-right{display:flex;align-items:center;gap:28px;}
+  .nav-links{display:flex;gap:22px;font-size:.86rem;font-weight:500;}
+  .nav-links a{opacity:.85;transition:opacity .2s,color .2s;}
+  .nav-links a:hover{opacity:1;color:var(--amber);}
+  .nav-book{background:var(--clay);color:#fff;padding:10px 20px;border-radius:3px;font-weight:600;font-size:.82rem;white-space:nowrap;transition:transform .25s,background .25s,box-shadow .25s;}
+  .nav-book:hover{background:#d16c4a;transform:translateY(-1px);box-shadow:0 8px 20px -6px rgba(193,95,63,.5);}
   .menu-btn{display:none;flex-direction:column;justify-content:center;gap:5px;width:42px;height:42px;background:none;border:none;cursor:pointer;padding:9px;}
-  .menu-btn span{display:block;width:100%;height:2.5px;background:var(--oat);border-radius:2px;transition:transform .3s,opacity .3s;}
-  .menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(7.5px) rotate(45deg);}
+  .menu-btn span{display:block;width:100%;height:2px;background:var(--paper);border-radius:2px;transition:transform .3s,opacity .3s;}
+  .menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
   .menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0;}
-  .menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg);}
-  .mobile-menu{
-    position:fixed;top:0;left:0;right:0;z-index:70;padding:78px 22px 22px;background:rgba(36,26,16,.99);
-    backdrop-filter:blur(10px);display:flex;flex-direction:column;transform:translateY(-14px);opacity:0;
-    pointer-events:none;transition:transform .3s,opacity .3s;border-bottom:2px solid var(--buttercup);
-  }
+  .menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .mobile-menu{position:fixed;top:0;left:0;right:0;z-index:70;padding:82px 24px 24px;background:rgba(18,36,26,.99);backdrop-filter:blur(10px);display:flex;flex-direction:column;transform:translateY(-14px);opacity:0;pointer-events:none;transition:transform .3s,opacity .3s;}
   .mobile-menu.open{transform:translateY(0);opacity:1;pointer-events:auto;}
-  .mobile-menu a{padding:14px 4px;font-size:1.05rem;color:var(--oat);font-weight:600;border-bottom:1px solid rgba(246,240,226,.1);}
+  .mobile-menu a{padding:14px 4px;font-size:1.05rem;color:var(--paper);border-bottom:1px solid rgba(242,236,224,.1);}
   .mobile-menu a:last-child{border-bottom:none;}
-  @media (min-width:881px){.mobile-menu{display:none;}}
-  @media (max-width:880px){
-    nav{padding:14px 18px;}
-    .nav-links{display:none;}
-    .nav-right{gap:10px;}
-    .menu-btn{display:flex;}
-  }
+  @media (min-width:921px){.mobile-menu{display:none;}}
+  @media (max-width:920px){nav{padding:15px 20px;}.nav-links{display:none;}.nav-right{gap:12px;}.menu-btn{display:flex;}}
 
   /* HERO */
-  .hero{
-    position:relative;min-height:100vh;min-height:100dvh;display:flex;align-items:center;
-    background:
-      radial-gradient(ellipse 80% 50% at 70% 15%, rgba(92,122,58,.35), transparent 70%),
-      linear-gradient(170deg,#2f2214 0%,var(--soil) 55%,var(--soil-deep) 100%);
-    color:var(--oat);overflow:hidden;padding:120px 0 90px;
-  }
-  .hero-grid{position:relative;z-index:3;display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center;width:100%;}
-  @media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:36px;}}
+  .hero{position:relative;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(180deg,#1c3a26 0%,var(--forest) 55%,var(--forest-deep) 100%);color:var(--paper);overflow:hidden;}
+  .canopy{position:absolute;inset:0;z-index:0;pointer-events:none;}
+  .canopy-layer{position:absolute;left:-5%;width:110%;}
+  .canopy-layer svg{width:100%;display:block;}
+  .canopy-1{top:0;opacity:.5;}
+  .canopy-2{top:-8px;opacity:.72;}
+  .canopy-3{top:16px;opacity:.95;}
+  .sun{position:absolute;top:8%;right:14%;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,rgba(223,160,73,.4),transparent 68%);pointer-events:none;}
+  .leaf{position:absolute;top:-40px;font-size:1rem;opacity:.8;animation:leafFall linear infinite;filter:drop-shadow(0 2px 3px rgba(0,0,0,.25));}
+  @keyframes leafFall{0%{transform:translate(0,0) rotate(0);}100%{transform:translate(var(--drift,40px),115vh) rotate(330deg);}}
+  @media (max-width:600px){.leaf{display:none;}}
+  .undergrowth{position:absolute;left:0;right:0;bottom:-2px;z-index:1;pointer-events:none;}
+  .undergrowth svg{width:100%;display:block;}
 
-  .float-bit{position:absolute;opacity:.5;pointer-events:none;color:var(--fern);animation:bob 9s ease-in-out infinite;}
-  @keyframes bob{0%,100%{transform:translateY(0) rotate(0);}50%{transform:translateY(-22px) rotate(9deg);}}
+  .hero-inner{position:relative;z-index:3;padding:150px 0 96px;}
+  @media (max-width:600px){.hero-inner{padding:120px 0 70px;}}
+  .eyebrow{position:relative;display:inline-block;font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;color:var(--amber);padding-left:36px;margin-bottom:24px;opacity:0;animation:riseIn .8s ease forwards .1s;}
+  .eyebrow::before{content:'';position:absolute;left:0;top:50%;width:24px;height:1px;background:var(--amber);transform:translateY(-50%);}
+  .eyebrow .short{display:none;}
+  @media (max-width:520px){.eyebrow .full{display:none;}.eyebrow .short{display:inline;}}
 
-  .hero-eyebrow{
-    display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.76rem;letter-spacing:.06em;
-    color:var(--buttercup);border:1px solid rgba(242,194,48,.4);border-radius:999px;padding:7px 15px;margin-bottom:26px;
-    opacity:0;animation:pop .7s cubic-bezier(.2,.9,.3,1.2) forwards .1s;
-  }
-  .hero-eyebrow .pip{width:7px;height:7px;border-radius:50%;background:var(--fern);}
-  @keyframes pop{from{opacity:0;transform:scale(.9) translateY(10px);}to{opacity:1;transform:scale(1) translateY(0);}}
+  .h-title{display:flex;flex-direction:column;margin-bottom:26px;}
+  .h-title .l1{font-size:clamp(2.6rem,9vw,6.2rem);color:var(--paper);}
+  .h-title .l2{font-size:clamp(2.6rem,9vw,6.2rem);color:var(--amber);font-style:italic;font-weight:400;margin-top:-.08em;}
+  .h-title .word{display:inline-block;opacity:0;transform:translateY(38px);animation:wordRise .85s cubic-bezier(.2,.8,.2,1) forwards;}
+  .h-title .l1 .word{animation-delay:.16s;}
+  .h-title .l2 .word{animation-delay:.3s;}
+  @keyframes wordRise{to{opacity:1;transform:translateY(0);}}
+  @keyframes riseIn{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
 
-  h1{font-family:var(--display);font-weight:800;font-size:clamp(2.9rem,8.4vw,5.9rem);line-height:.96;letter-spacing:-.025em;}
-  h1 .l{display:block;opacity:0;transform:translateY(38px);animation:up .85s cubic-bezier(.2,.8,.2,1) forwards;}
-  h1 .l1{animation-delay:.16s;}
-  h1 .l2{animation-delay:.3s;color:var(--buttercup);}
-  h1 .l3{animation-delay:.44s;}
-  @keyframes up{to{opacity:1;transform:translateY(0);}}
-
-  .hero-sub{margin-top:24px;max-width:500px;font-size:1.1rem;line-height:1.65;color:var(--oat-dim);opacity:0;animation:up .9s ease forwards .6s;}
-  .hero-cta{margin-top:34px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;opacity:0;animation:up .9s ease forwards .74s;}
-  .btn{
-    display:inline-block;background:var(--rust);color:#fff;font-family:var(--display);font-weight:700;font-size:.98rem;
-    padding:15px 30px;border-radius:999px;border:none;cursor:pointer;transition:transform .3s,box-shadow .3s,background .3s;
-  }
-  .btn:hover{transform:translateY(-2px);background:#d15734;box-shadow:0 14px 28px -10px rgba(190,74,43,.75);}
-  .btn.pale{background:var(--buttercup);color:var(--soil);}
-  .btn.pale:hover{background:#ffd44f;box-shadow:0 14px 28px -10px rgba(242,194,48,.7);}
-  .btn.hollow{background:transparent;color:var(--oat);border:1.5px solid rgba(246,240,226,.35);}
-  .btn.hollow:hover{background:transparent;border-color:var(--buttercup);box-shadow:none;}
-  @media (max-width:420px){.hero-cta{flex-direction:column;align-items:stretch;}.btn{text-align:center;}}
-
-  /* hero facts card */
-  .hero-card{
-    background:rgba(246,240,226,.07);border:1px solid rgba(246,240,226,.16);border-radius:16px;padding:26px;
-    backdrop-filter:blur(4px);opacity:0;animation:up .9s ease forwards .86s;
-  }
-  .hero-card h2{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;color:var(--buttercup);margin-bottom:18px;font-weight:400;}
-  .hero-card dl{display:flex;flex-direction:column;gap:14px;}
-  .hero-card .row{display:flex;justify-content:space-between;gap:16px;align-items:baseline;border-bottom:1px dashed rgba(246,240,226,.16);padding-bottom:13px;}
-  .hero-card .row:last-child{border-bottom:none;padding-bottom:0;}
-  .hero-card dt{font-size:.84rem;color:var(--oat-dim);}
-  .hero-card dd{font-family:var(--display);font-weight:700;font-size:.98rem;text-align:right;}
+  .hero-sub{max-width:540px;font-size:1.12rem;line-height:1.62;color:rgba(242,236,224,.82);opacity:0;animation:riseIn .9s ease forwards .5s;}
+  .hero-cta{margin-top:34px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;opacity:0;animation:riseIn .9s ease forwards .64s;}
+  .btn-primary{background:var(--clay);color:#fff;font-weight:600;font-size:.92rem;padding:15px 28px;border-radius:3px;border:none;cursor:pointer;display:inline-block;transition:transform .3s,box-shadow .3s;}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(193,95,63,.5);}
+  .btn-ghost{font-size:.9rem;color:var(--paper);border-bottom:1px solid rgba(242,236,224,.35);padding-bottom:3px;transition:border-color .25s;}
+  .btn-ghost:hover{border-color:var(--amber);}
+  @media (max-width:420px){.hero-cta{flex-direction:column;align-items:stretch;}.btn-primary{width:100%;text-align:center;}.hero-cta .btn-ghost{align-self:flex-start;}}
+  .scroll-cue{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;opacity:.65;}
+  .scroll-cue .line{width:1px;height:32px;background:linear-gradient(180deg,var(--amber),transparent);position:relative;overflow:hidden;}
+  .scroll-cue .line::after{content:'';position:absolute;top:-100%;left:0;width:100%;height:100%;background:var(--amber);animation:cueDrop 2.4s ease-in-out infinite;}
+  @keyframes cueDrop{0%{top:-100%;}60%{top:100%;}100%{top:100%;}}
+  .scroll-cue .label{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;color:rgba(242,236,224,.7);}
+  @media (max-width:680px){.scroll-cue{display:none;}}
 
   /* MARQUEE */
-  .marquee{background:var(--buttercup);color:var(--soil);overflow:hidden;white-space:nowrap;border-top:3px solid var(--soil);border-bottom:3px solid var(--soil);}
-  .marquee-track{display:inline-flex;animation:slide 30s linear infinite;font-family:var(--display);font-weight:700;font-size:1.05rem;padding:12px 0;}
-  .marquee-track span{padding:0 22px;}
-  @keyframes slide{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-  @media (max-width:600px){.marquee-track{font-size:.8rem;padding:9px 0;}}
+  .marquee{position:relative;z-index:10;background:var(--amber);color:var(--forest-deep);overflow:hidden;white-space:nowrap;border-top:2px solid var(--forest-deep);border-bottom:2px solid var(--forest-deep);}
+  .marquee-track{display:inline-flex;animation:marqueeScroll 30s linear infinite;font-family:var(--serif);font-style:italic;font-size:1.15rem;padding:12px 0;}
+  .marquee-track span{padding:0 24px;}
+  @keyframes marqueeScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  @media (max-width:600px){.marquee-track{font-size:.9rem;}}
 
-  /* BURROW DIVIDER */
-  .burrow{display:block;width:100%;height:60px;color:var(--bark);}
-  .burrow path{stroke-dasharray:1200;stroke-dashoffset:1200;transition:stroke-dashoffset 1.8s cubic-bezier(.2,.8,.2,1);}
-  .burrow.drawn path{stroke-dashoffset:0;}
-  .burrow circle{opacity:0;transition:opacity .5s ease 1.3s;}
-  .burrow.drawn circle{opacity:1;}
+  /* QUICK FACTS */
+  .facts{background:var(--paper);padding:56px 0;border-bottom:1px solid rgba(27,36,28,.09);}
+  .facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  .fact b{display:block;font-family:var(--serif);font-size:2.2rem;color:var(--clay);line-height:1;}
+  .fact span{font-size:.84rem;color:var(--ink-soft);margin-top:8px;display:block;}
+  @media (max-width:760px){.facts .wrap{grid-template-columns:1fr 1fr;gap:28px;}}
 
-  .eyebrow-label{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;color:var(--rust);text-transform:uppercase;margin-bottom:14px;display:block;}
+  .kicker{font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;color:var(--clay);text-transform:uppercase;margin-bottom:14px;display:block;}
   .fade-up{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1);}
   .fade-up.visible{opacity:1;transform:translateY(0);}
 
-  h2.big{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.08;letter-spacing:-.02em;}
+  /* VALUES */
+  .values{background:var(--forest);color:var(--paper);padding:120px 0;position:relative;overflow:hidden;}
+  @media (max-width:600px){.values{padding:78px 0;}}
+  .values-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:start;}
+  @media (max-width:880px){.values-grid{grid-template-columns:1fr;gap:44px;}}
+  .values h2{font-size:clamp(2rem,3.6vw,2.9rem);color:var(--paper);}
+  .values h2 em{font-style:italic;color:var(--amber);}
+  .values-lead{font-size:1.06rem;line-height:1.7;color:rgba(242,236,224,.82);margin-top:20px;}
+  .stamp{margin-top:30px;display:inline-flex;align-items:center;gap:14px;border:2px solid rgba(223,160,73,.5);border-radius:8px;padding:14px 18px;transform:rotate(-1.5deg);}
+  .stamp .ring{width:42px;height:42px;border:2px dashed var(--amber);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.62rem;color:var(--amber);text-align:center;line-height:1.1;flex-shrink:0;}
+  .stamp .st-txt{font-family:var(--mono);font-size:.74rem;letter-spacing:.04em;color:rgba(242,236,224,.85);line-height:1.5;}
+  .stamp .st-txt b{color:var(--paper);}
+  .creed{list-style:none;display:flex;flex-direction:column;gap:22px;}
+  .creed li{padding-left:34px;position:relative;}
+  .creed li::before{content:'';position:absolute;left:0;top:9px;width:16px;height:16px;background:var(--amber);clip-path:polygon(50% 0,61% 35%,100% 35%,68% 57%,79% 100%,50% 72%,21% 100%,32% 57%,0 35%,39% 35%);}
+  .creed h3{font-size:1.18rem;color:var(--paper);margin-bottom:5px;}
+  .creed p{font-size:.94rem;color:rgba(242,236,224,.75);line-height:1.6;}
 
-  /* DOING */
-  .doing{padding:100px 0 90px;}
-  @media (max-width:600px){.doing{padding:70px 0 60px;}}
-  .doing-head{max-width:560px;margin-bottom:48px;}
-  .doing-head p{margin-top:14px;font-size:1.02rem;line-height:1.7;color:#5c4a37;}
-  .doing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-  @media (max-width:860px){.doing-grid{grid-template-columns:1fr 1fr;}}
-  @media (max-width:540px){.doing-grid{grid-template-columns:1fr;}}
-  .do-card{
-    background:#fff;border:2px solid var(--soil);border-radius:14px;padding:26px 22px;
-    box-shadow:5px 5px 0 var(--soil);transition:transform .2s ease,box-shadow .2s ease;
-  }
-  .do-card:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--soil);}
-  .do-card svg{width:34px;height:34px;color:var(--moss);margin-bottom:14px;}
-  .do-card h3{font-family:var(--display);font-weight:700;font-size:1.15rem;margin-bottom:8px;}
-  .do-card p{font-size:.93rem;line-height:1.6;color:#5c4a37;}
-
-  /* LEADER */
-  .leader{background:var(--bark);color:var(--oat);padding:100px 0;}
-  @media (max-width:600px){.leader{padding:70px 0;}}
-  .leader-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:start;}
-  @media (max-width:880px){.leader-grid{grid-template-columns:1fr;gap:36px;}}
-  .leader .eyebrow-label{color:var(--buttercup);}
-  .leader p.lead{font-size:1.06rem;line-height:1.75;color:var(--oat-dim);margin-bottom:26px;}
-  .creds{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-  @media (max-width:520px){.creds{grid-template-columns:1fr;}}
-  .cred{display:flex;gap:11px;align-items:flex-start;background:rgba(246,240,226,.06);border-radius:10px;padding:14px 15px;font-size:.9rem;line-height:1.45;}
-  .cred svg{width:17px;height:17px;flex-shrink:0;color:var(--fern);margin-top:2px;}
-
-  /* SAFETY */
-  .safety{padding:90px 0;background:var(--oat-dim);}
-  @media (max-width:600px){.safety{padding:66px 0;}}
-  .safety-head{max-width:540px;margin-bottom:40px;}
-  .safety-head p{margin-top:12px;color:#5c4a37;line-height:1.7;}
-  .safety-list{display:flex;flex-wrap:wrap;gap:10px;}
-  .chip{
-    display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--soil);
-    border-radius:999px;padding:10px 17px;font-size:.88rem;font-weight:600;
-  }
-  .chip svg{width:15px;height:15px;color:var(--moss);}
+  /* SESSION ACTIVITIES */
+  .sessions{background:var(--paper-2);padding:120px 0;}
+  @media (max-width:600px){.sessions{padding:78px 0;}}
+  .sec-head{max-width:640px;margin-bottom:56px;}
+  .sec-head h2{font-size:clamp(2rem,3.6vw,2.9rem);}
+  .sec-head p{margin-top:16px;color:var(--ink-soft);line-height:1.65;font-size:1rem;}
+  .activity-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+  .activity{background:var(--paper);border:1px solid rgba(27,36,28,.1);border-radius:8px;padding:24px 22px;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,border-color .25s;}
+  .activity:hover{transform:translateY(-5px);box-shadow:0 18px 34px -20px rgba(18,36,26,.4);border-color:var(--fern);}
+  .activity .glyph svg{width:30px;height:30px;color:var(--pine);margin-bottom:14px;}
+  .activity h3{font-size:1.12rem;margin-bottom:6px;}
+  .activity p{font-size:.88rem;color:var(--ink-soft);line-height:1.55;}
+  @media (max-width:900px){.activity-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:520px){.activity-grid{grid-template-columns:1fr;}}
 
   /* GAME */
-  .game-sec{background:var(--soil);color:var(--oat);padding:100px 0;}
-  @media (max-width:600px){.game-sec{padding:70px 0;}}
-  .game-head{max-width:600px;margin-bottom:34px;}
-  .game-head .eyebrow-label{color:var(--buttercup);}
-  .game-head h2 em{font-style:normal;color:var(--buttercup);}
-  .game-head p{margin-top:13px;color:var(--oat-dim);line-height:1.7;}
-  .game-shell{border:2px solid var(--buttercup);border-radius:16px;overflow:hidden;background:#1b1209;max-width:760px;box-shadow:0 26px 60px -28px #000;}
-  .game-hud{
-    display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px;
-    background:rgba(0,0,0,.3);border-bottom:1px solid rgba(246,240,226,.14);
-    font-family:var(--mono);font-size:.78rem;flex-wrap:wrap;
-  }
-  .game-hud .g{display:flex;gap:18px;}
-  .game-hud b{color:var(--buttercup);font-weight:700;}
-  .canvas-wrap{position:relative;width:100%;aspect-ratio:4/3;}
-  #wrigg{width:100%;height:100%;display:block;touch-action:none;}
-  .g-overlay{
-    position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
-    text-align:center;padding:26px;background:rgba(24,15,8,.9);transition:opacity .3s,visibility .3s;
-  }
-  .g-overlay.hidden{opacity:0;visibility:hidden;pointer-events:none;}
-  .g-overlay h3{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,4.5vw,2.2rem);}
-  .g-overlay h3 em{font-style:normal;color:var(--buttercup);}
-  .g-overlay p{max-width:340px;font-size:.9rem;line-height:1.6;color:var(--oat-dim);}
-  .g-overlay .keys{font-family:var(--mono);font-size:.72rem;color:rgba(230,220,196,.7);}
-  .g-score{font-family:var(--display);font-weight:800;font-size:2.8rem;color:var(--buttercup);line-height:1;}
-  .g-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
-  .pad{display:grid;grid-template-columns:repeat(3,58px);grid-template-rows:repeat(2,58px);gap:8px;justify-content:center;padding:16px;background:rgba(0,0,0,.25);}
-  .pad button{
-    background:rgba(246,240,226,.1);border:1.5px solid rgba(246,240,226,.28);border-radius:12px;color:var(--oat);
-    font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;
-  }
-  .pad button:active{background:var(--buttercup);color:var(--soil);}
-  .pad .up{grid-column:2;grid-row:1;}
-  .pad .left{grid-column:1;grid-row:2;}
-  .pad .down{grid-column:2;grid-row:2;}
-  .pad .right{grid-column:3;grid-row:2;}
-  @media (min-width:701px){.pad{display:none;}}
+  .game-section{background:var(--forest-deep);color:var(--paper);padding:110px 0;}
+  @media (max-width:600px){.game-section{padding:74px 0;}}
+  .game-head{max-width:640px;margin-bottom:36px;}
+  .game-head h2{font-size:clamp(2rem,3.6vw,2.9rem);}
+  .game-head h2 em{font-style:italic;color:var(--amber);}
+  .game-head p{margin-top:14px;color:rgba(242,236,224,.78);line-height:1.6;}
+  .game-shell{position:relative;border:1px solid rgba(242,236,224,.16);border-radius:12px;overflow:hidden;background:#0f1c12;box-shadow:0 30px 70px -30px rgba(0,0,0,.8);}
+  .game-hud{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 18px;background:rgba(0,0,0,.3);border-bottom:1px solid rgba(242,236,224,.12);font-family:var(--mono);font-size:.76rem;letter-spacing:.03em;flex-wrap:wrap;}
+  .game-hud .hud-group{display:flex;align-items:center;gap:16px;}
+  .hud-val{color:var(--amber);}
+  .hud-val.worm{color:var(--worm);}
+  .hud-lives{display:flex;gap:5px;}
+  .hud-lives i{width:11px;height:11px;border-radius:50%;background:var(--clay);display:block;transition:opacity .25s,transform .25s;}
+  .hud-lives i.lost{opacity:.22;transform:scale(.75);}
+  .game-canvas-wrap{position:relative;width:100%;aspect-ratio:16/10;}
+  @media (max-width:700px){.game-canvas-wrap{aspect-ratio:3/4;}}
+  #gameCanvas{width:100%;height:100%;display:block;touch-action:none;cursor:grab;}
+  #gameCanvas:active{cursor:grabbing;}
+  .game-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:13px;text-align:center;padding:28px;background:rgba(12,25,16,.9);backdrop-filter:blur(3px);transition:opacity .3s,visibility .3s;}
+  .game-overlay.hidden{opacity:0;visibility:hidden;pointer-events:none;}
+  .game-overlay h3{font-size:clamp(1.5rem,4vw,2.2rem);}
+  .game-overlay h3 em{font-style:italic;color:var(--amber);}
+  .game-overlay p{max-width:400px;font-size:.9rem;line-height:1.6;color:rgba(242,236,224,.78);}
+  .game-overlay .keys{font-family:var(--mono);font-size:.74rem;color:rgba(242,236,224,.7);letter-spacing:.03em;}
+  .game-btn{background:var(--amber);color:var(--forest-deep);border:none;border-radius:3px;cursor:pointer;font-family:var(--sans);font-weight:600;font-size:.92rem;padding:14px 30px;margin-top:4px;transition:transform .25s,box-shadow .25s;}
+  .game-btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(223,160,73,.6);}
+  .game-btn.secondary{background:transparent;color:var(--paper);border:1px solid rgba(242,236,224,.4);}
+  .game-btn.secondary:hover{border-color:var(--amber);box-shadow:none;}
+  .final-score{font-family:var(--serif);font-size:2.8rem;color:var(--amber);line-height:1;}
+  .final-break{font-family:var(--mono);font-size:.78rem;color:rgba(242,236,224,.75);}
+  .final-note{font-size:.88rem;color:rgba(242,236,224,.78);font-style:italic;font-family:var(--serif);}
+  .overlay-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:6px;}
+  .game-foot{padding:12px 18px;font-family:var(--mono);font-size:.72rem;color:rgba(242,236,224,.55);border-top:1px solid rgba(242,236,224,.12);text-align:center;}
 
-  /* PRACTICAL */
-  .kit{padding:100px 0;}
-  @media (max-width:600px){.kit{padding:70px 0;}}
-  .kit-head{max-width:560px;margin-bottom:44px;}
-  .kit-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
-  @media (max-width:780px){.kit-grid{grid-template-columns:1fr;}}
-  .kit-col{background:#fff;border:2px solid var(--soil);border-radius:14px;padding:28px 26px;}
-  .kit-col h3{font-family:var(--display);font-weight:700;font-size:1.2rem;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
-  .kit-col h3 svg{width:22px;height:22px;}
-  .kit-col ul{list-style:none;display:flex;flex-direction:column;gap:11px;}
-  .kit-col li{position:relative;padding-left:26px;font-size:.95rem;line-height:1.55;color:#4a3a2a;}
-  .kit-col li::before{content:'';position:absolute;left:0;top:7px;width:11px;height:11px;border-radius:3px;background:var(--fern);}
-  .kit-col.warn li::before{background:var(--rust);}
-  .nut-note{
-    margin-top:26px;background:var(--rust);color:#fff;border-radius:14px;padding:22px 26px;
-    display:flex;gap:16px;align-items:center;
-  }
-  .nut-note svg{width:30px;height:30px;flex-shrink:0;}
-  .nut-note b{font-family:var(--display);font-size:1.05rem;display:block;margin-bottom:3px;}
-  .nut-note span{font-size:.92rem;line-height:1.5;opacity:.95;}
+  /* HOME ED */
+  .homeed{background:var(--paper);padding:120px 0;}
+  @media (max-width:600px){.homeed{padding:78px 0;}}
+  .he-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .he-card{background:var(--paper-2);border:1px solid rgba(27,36,28,.09);border-radius:8px;padding:32px 28px;transition:transform .25s,box-shadow .25s;}
+  .he-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -22px rgba(18,36,26,.35);}
+  .he-card .tag{font-family:var(--mono);font-size:.72rem;color:var(--clay);letter-spacing:.04em;margin-bottom:14px;display:block;}
+  .he-card h3{font-size:1.22rem;margin-bottom:10px;color:var(--pine);}
+  .he-card p{font-size:.92rem;color:var(--ink-soft);line-height:1.6;}
+  @media (max-width:860px){.he-cards{grid-template-columns:1fr;}}
 
-  /* FAQ */
-  .faq{padding:90px 0;background:var(--oat-dim);}
-  @media (max-width:600px){.faq{padding:66px 0;}}
-  .faq-head{max-width:520px;margin-bottom:40px;}
-  .faq-list{max-width:820px;border-top:2px solid var(--soil);}
-  .faq-item{border-bottom:2px solid var(--soil);}
-  .faq-q{
-    width:100%;background:none;border:none;cursor:pointer;text-align:left;display:flex;justify-content:space-between;
-    align-items:center;gap:16px;padding:20px 0;font-family:var(--display);font-weight:700;font-size:1.02rem;color:var(--soil);
-  }
-  .faq-q:hover{color:var(--rust);}
-  .faq-q .chev{flex-shrink:0;width:20px;height:20px;color:var(--rust);transition:transform .3s;}
-  .faq-item.open .chev{transform:rotate(45deg);}
+  /* REVIEWS */
+  .reviews{background:var(--pine);color:var(--paper);padding:120px 0;}
+  @media (max-width:600px){.reviews{padding:78px 0;}}
+  .reviews .kicker{color:var(--amber);}
+  .reviews h2{font-size:clamp(2rem,3.6vw,2.9rem);color:var(--paper);max-width:640px;}
+  .rev-feature{margin:44px 0;padding-left:30px;border-left:3px solid var(--amber);max-width:820px;}
+  .rev-feature blockquote{font-family:var(--serif);font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.4;color:var(--paper);}
+  .rev-feature cite{display:block;margin-top:18px;font-family:var(--mono);font-size:.78rem;font-style:normal;color:rgba(242,236,224,.7);letter-spacing:.03em;}
+  .rev-pair{display:grid;grid-template-columns:1fr 1fr;gap:26px;}
+  .rev-card{background:rgba(242,236,224,.06);border:1px solid rgba(242,236,224,.14);border-radius:8px;padding:28px;}
+  .rev-card .stars{color:var(--amber);letter-spacing:3px;font-size:.9rem;margin-bottom:14px;}
+  .rev-card p{font-size:.98rem;line-height:1.6;color:rgba(242,236,224,.9);}
+  .rev-card cite{display:block;margin-top:16px;font-family:var(--mono);font-size:.76rem;font-style:normal;color:rgba(242,236,224,.65);}
+  .rev-note{margin-top:34px;font-size:.88rem;color:rgba(242,236,224,.7);}
+  .rev-note a{color:var(--amber);border-bottom:1px solid var(--amber);padding-bottom:1px;}
+  @media (max-width:700px){.rev-pair{grid-template-columns:1fr;}}
+
+  /* ABOUT / MEET SAHAR */
+  .about{background:var(--paper);padding:120px 0;}
+  @media (max-width:600px){.about{padding:78px 0;}}
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start;}
+  @media (max-width:840px){.about-grid{grid-template-columns:1fr;gap:40px;}}
+  .portrait{position:relative;}
+  .photo-slot{position:relative;background:var(--kraft);border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;color:var(--pine);}
+  .portrait .photo-slot{aspect-ratio:4/5;box-shadow:0 20px 44px -24px rgba(18,36,26,.5);}
+  .photo-slot .ph-inner{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;padding:24px;opacity:.7;}
+  .photo-slot .ph-inner svg{width:34px;height:34px;}
+  .photo-slot .ph-inner span{font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;max-width:190px;line-height:1.4;}
+  .portrait .cap{position:absolute;bottom:-14px;left:50%;transform:translateX(-50%) rotate(-2deg);background:var(--amber);color:var(--forest-deep);font-family:var(--mono);font-size:.72rem;padding:7px 16px;border-radius:3px;white-space:nowrap;box-shadow:0 8px 20px -10px rgba(0,0,0,.4);}
+  .about h2{font-size:clamp(2rem,3.6vw,2.8rem);}
+  .about h2 em{font-style:italic;color:var(--clay);}
+  .about-copy{display:flex;flex-direction:column;gap:18px;margin-top:22px;font-size:1.02rem;line-height:1.72;color:var(--ink-soft);}
+  .about-copy strong{color:var(--ink);}
+  .creds{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px;}
+  .creds span{font-family:var(--mono);font-size:.71rem;letter-spacing:.02em;background:var(--paper-2);border:1px solid rgba(27,36,28,.12);color:var(--pine);padding:8px 13px;border-radius:100px;}
+
+  /* GALLERY */
+  .gallery{background:var(--paper-2);padding:120px 0;}
+  @media (max-width:600px){.gallery{padding:78px 0;}}
+  .po-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px 30px;margin-top:12px;}
+  @media (max-width:820px){.po-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:480px){.po-grid{grid-template-columns:1fr;}}
+  .polaroid{background:#fff;padding:12px 12px 44px;border-radius:2px;box-shadow:0 14px 30px -16px rgba(18,36,26,.45);position:relative;transition:transform .3s cubic-bezier(.2,.8,.2,1);}
+  .polaroid:nth-child(odd){transform:rotate(-1.6deg);}
+  .polaroid:nth-child(even){transform:rotate(1.4deg);}
+  .polaroid:hover{transform:rotate(0) translateY(-5px);}
+  .polaroid::before{content:'';position:absolute;top:-11px;left:50%;transform:translateX(-50%) rotate(-3deg);width:82px;height:24px;background:rgba(223,160,73,.55);border:1px solid rgba(223,160,73,.7);}
+  .polaroid .pic{aspect-ratio:1/1;border-radius:1px;overflow:hidden;display:block;}
+  .polaroid .cap{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-family:var(--serif);font-style:italic;font-size:.98rem;color:var(--ink);}
+  .gallery .ig-line{margin-top:44px;text-align:center;font-size:.95rem;color:var(--ink-soft);}
+  .gallery .ig-line a{color:var(--clay);font-weight:600;border-bottom:1px solid var(--clay);padding-bottom:1px;}
+
+  /* POSTER */
+  .poster-section{background:var(--paper);padding:120px 0;}
+  @media (max-width:600px){.poster-section{padding:78px 0;}}
+  .poster-wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
+  @media (max-width:820px){.poster-wrap{grid-template-columns:1fr;gap:36px;}}
+  .poster-text h2{font-size:clamp(2rem,3.6vw,2.8rem);}
+  .poster-text p{margin-top:16px;color:var(--ink-soft);line-height:1.7;font-size:1.02rem;}
+  .poster-text .btn-primary{margin-top:26px;}
+  .flyer{background:var(--forest);color:var(--paper);border-radius:10px;padding:40px 36px;position:relative;overflow:hidden;box-shadow:0 30px 60px -30px rgba(18,36,26,.6);transform:rotate(-1deg);}
+  .flyer::after{content:'';position:absolute;inset:14px;border:2px dashed rgba(223,160,73,.4);border-radius:6px;pointer-events:none;}
+  .flyer .f-top{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;color:var(--amber);text-transform:uppercase;}
+  .flyer h3{font-family:var(--serif);font-size:2rem;margin:12px 0 4px;color:var(--paper);line-height:1.05;}
+  .flyer h3 em{font-style:italic;color:var(--amber);}
+  .flyer .f-where{font-size:.96rem;color:rgba(242,236,224,.8);margin-bottom:22px;}
+  .flyer .f-rows{display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(242,236,224,.18);padding-top:18px;}
+  .flyer .f-row{display:flex;justify-content:space-between;font-size:.92rem;}
+  .flyer .f-row span:first-child{color:rgba(242,236,224,.65);font-family:var(--mono);font-size:.76rem;letter-spacing:.03em;}
+  .flyer .f-row span:last-child{color:var(--paper);font-weight:600;}
+  .flyer .f-cta{margin-top:22px;background:var(--clay);color:#fff;text-align:center;padding:13px;border-radius:4px;font-weight:600;font-size:.9rem;display:block;}
+  .flyer .f-doodle{position:absolute;bottom:-8px;right:-8px;opacity:.25;width:120px;}
+
+  /* BEFORE YOU COME */
+  .before{background:var(--kraft);padding:120px 0;}
+  @media (max-width:600px){.before{padding:78px 0;}}
+  .before .sec-head h2{color:var(--forest);}
+  .before .kicker{color:var(--pine);}
+  .before .sec-head p{color:#5b5137;}
+  .before-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
+  .bstep{border-top:2px solid var(--pine);padding-top:22px;}
+  .bstep h3{font-size:1.08rem;margin-bottom:8px;color:var(--ink);}
+  .bstep p{font-size:.9rem;line-height:1.6;color:#5b5137;}
+  .bstep.alert{border-top-color:var(--clay);}
+  .bstep.alert h3{color:var(--clay);}
+  @media (max-width:820px){.before-steps{grid-template-columns:1fr 1fr;gap:32px 26px;}}
+  @media (max-width:480px){.before-steps{grid-template-columns:1fr;}}
+
+  /* PROVIDED + SAFETY */
+  .provided{background:var(--paper);padding:120px 0;}
+  @media (max-width:600px){.provided{padding:78px 0;}}
+  .prov-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
+  @media (max-width:820px){.prov-grid{grid-template-columns:1fr;gap:44px;}}
+  .prov-block h2{font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:8px;}
+  .prov-block > p{color:var(--ink-soft);line-height:1.65;margin-bottom:24px;font-size:.98rem;}
+  .checklist{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .checklist li{display:flex;align-items:center;gap:10px;font-size:.94rem;color:var(--ink);}
+  .checklist li svg{width:18px;height:18px;color:var(--moss);flex-shrink:0;}
+  .badges{display:flex;flex-wrap:wrap;gap:10px;}
+  .badges span{font-family:var(--mono);font-size:.73rem;letter-spacing:.02em;background:var(--pine);color:var(--paper);padding:9px 14px;border-radius:100px;}
+  @media (max-width:400px){.checklist{grid-template-columns:1fr;}}
+
+  /* MAP */
+  .findus{background:var(--forest);color:var(--paper);padding:120px 0;}
+  @media (max-width:600px){.findus{padding:78px 0;}}
+  .findus .kicker{color:var(--amber);}
+  .map-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:34px;}
+  .map-head h2{font-size:clamp(2rem,3.6vw,2.8rem);color:var(--paper);}
+  .map-head .addr{font-size:.96rem;color:rgba(242,236,224,.78);line-height:1.5;max-width:280px;}
+  .map-frame{position:relative;border:1px solid rgba(242,236,224,.18);border-radius:12px;overflow:hidden;background:#0f1c12;}
+  .map-frame iframe{width:100%;height:420px;border:0;display:block;filter:saturate(.9);}
+  @media (max-width:600px){.map-frame iframe{height:320px;}}
+  .map-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;}
+  .map-btn{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:var(--forest-deep);font-weight:600;font-size:.9rem;padding:13px 22px;border-radius:4px;transition:transform .25s;}
+  .map-btn:hover{transform:translateY(-2px);}
+  .map-btn.alt{background:transparent;color:var(--paper);border:1px solid rgba(242,236,224,.4);}
+  .map-btn.alt:hover{border-color:var(--amber);}
+
+  /* FAQ + BOOKING */
+  .faq{background:var(--paper);padding:120px 0;}
+  @media (max-width:600px){.faq{padding:78px 0;}}
+  .faq-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:start;}
+  @media (max-width:860px){.faq-grid{grid-template-columns:1fr;gap:40px;}}
+  .booking-box{background:var(--paper-2);border:1px solid rgba(27,36,28,.1);border-radius:10px;padding:28px;}
+  .booking-box h3{font-size:1.3rem;margin-bottom:14px;color:var(--pine);}
+  .booking-box p{font-size:.92rem;line-height:1.65;color:var(--ink-soft);margin-bottom:14px;}
+  .booking-box .fineprint{font-size:.8rem;color:#6a7060;line-height:1.55;border-top:1px solid rgba(27,36,28,.12);padding-top:14px;margin-top:4px;}
+  .faq-list{border-top:1px solid rgba(27,36,28,.14);}
+  .faq-item{border-bottom:1px solid rgba(27,36,28,.14);}
+  .faq-q{width:100%;background:none;border:none;cursor:pointer;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:20px 0;font-family:var(--serif);font-weight:500;font-size:1.08rem;color:var(--ink);}
+  .faq-q:hover{color:var(--clay);}
+  .faq-q .chev{flex-shrink:0;width:20px;height:20px;color:var(--clay);transition:transform .3s;}
+  .faq-item.open .faq-q .chev{transform:rotate(45deg);}
   .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;}
-  .faq-a p{padding:0 0 20px;font-size:.96rem;line-height:1.7;color:#4a3a2a;max-width:660px;}
+  .faq-a p{padding:0 0 20px;font-size:.95rem;line-height:1.7;color:var(--ink-soft);}
 
-  /* BOOK */
-  .book{padding:110px 0 90px;text-align:center;background:var(--moss);color:#fff;}
-  @media (max-width:600px){.book{padding:76px 0 66px;}}
-  .book h2{font-family:var(--display);font-weight:800;font-size:clamp(2rem,5vw,3.2rem);line-height:1.08;max-width:640px;margin:0 auto 16px;letter-spacing:-.02em;}
-  .book p.sub{max-width:460px;margin:0 auto 34px;line-height:1.7;opacity:.95;}
-  .book-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-  .book .btn.hollow{color:#fff;border-color:rgba(255,255,255,.55);}
-  .book .btn.hollow:hover{border-color:#fff;}
-  .venue{
-    margin:44px auto 0;max-width:520px;background:rgba(0,0,0,.16);border-radius:14px;padding:22px;
-    font-size:.93rem;line-height:1.6;
-  }
-  .venue b{font-family:var(--display);display:block;margin-bottom:5px;}
-  .venue a{border-bottom:1px solid rgba(255,255,255,.6);}
+  /* CTA */
+  .cta{background:var(--forest-deep);color:var(--paper);padding:120px 0 96px;text-align:center;position:relative;overflow:hidden;}
+  @media (max-width:600px){.cta{padding:80px 0 70px;}}
+  .cta h2{font-size:clamp(2.2rem,5vw,3.4rem);max-width:680px;margin:0 auto 16px;color:var(--paper);}
+  .cta h2 em{font-style:italic;color:var(--amber);}
+  .cta p{max-width:460px;margin:0 auto 36px;color:rgba(242,236,224,.78);line-height:1.6;}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
 
-  footer{
-    background:var(--soil-deep);color:var(--oat-dim);padding:34px 40px 44px;display:flex;
-    justify-content:space-between;align-items:center;font-family:var(--mono);font-size:.74rem;flex-wrap:wrap;gap:14px;
-  }
-  footer a:hover{color:var(--buttercup);}
+  footer{background:var(--forest-deep);color:rgba(242,236,224,.7);padding:30px 40px 44px;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:.73rem;flex-wrap:wrap;gap:14px;border-top:1px solid rgba(242,236,224,.1);}
+  footer .socials{display:flex;gap:16px;}
+  footer .socials a:hover{color:var(--amber);}
   @media (max-width:700px){footer{justify-content:center;text-align:center;padding-bottom:94px;}}
 
-  .book-bar{
-    position:fixed;left:0;right:0;bottom:0;z-index:85;display:none;
-    padding:11px 14px calc(11px + env(safe-area-inset-bottom));
-    background:rgba(36,26,16,.97);border-top:2px solid var(--buttercup);
-    transform:translateY(110%);transition:transform .35s cubic-bezier(.2,.8,.2,1);
-  }
+  .book-bar{position:fixed;left:0;right:0;bottom:0;z-index:85;display:none;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(18,36,26,.97);backdrop-filter:blur(8px);border-top:1px solid rgba(242,236,224,.14);transform:translateY(110%);transition:transform .35s cubic-bezier(.2,.8,.2,1);}
   .book-bar.show{transform:translateY(0);}
-  .book-bar a{display:block;text-align:center;background:var(--rust);color:#fff;font-family:var(--display);font-weight:700;font-size:.98rem;padding:14px;border-radius:999px;}
+  .book-bar a{display:block;text-align:center;background:var(--clay);color:#fff;font-weight:600;font-size:.95rem;padding:14px;border-radius:4px;}
   @media (max-width:700px){.book-bar{display:block;}}
 </style>
 </head>
@@ -319,299 +393,383 @@
 
 <a class="skip" href="#main">Skip to content</a>
 
+<div id="preload">
+  <svg viewBox="0 0 120 46" aria-hidden="true">
+    <path class="pl-draw" d="M14 36L54 12" stroke="#d2a878" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path class="pl-draw" d="M64 27c6-8 12 8 18 0s12 8 18 0" stroke="#dd8b78" stroke-width="4" fill="none" stroke-linecap="round" style="animation-delay:.25s"/>
+  </svg>
+  <div class="pl-mark">Sticks &amp; Worms</div>
+</div>
+
+<div id="progress"></div>
+
 <nav>
-  <div class="nav-mark">
-    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M5 24c0-5 7-5 7-10s7-5 7 0 7 5 7 9"/></svg>
-    Sticks and Worms
-  </div>
+  <div class="nav-mark"><span class="dot"></span>Sticks &amp; Worms</div>
   <div class="nav-right">
     <div class="nav-links">
-      <a href="#doing">The sessions</a>
-      <a href="#leader">Who runs it</a>
+      <a href="#values">Ethos</a>
+      <a href="#sessions">Sessions</a>
       <a href="#game">Play</a>
-      <a href="#kit">What to bring</a>
-      <a href="#faq">FAQs</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+      <a href="#findus">Find us</a>
     </div>
-    <a class="nav-book" href="https://eequ.org/book/blackburn-home-ed-forest-school-july-2026-with-sticks-and-worms-6901" target="_blank" rel="noopener">Book a place</a>
+    <a class="nav-book" href="https://eequ.org/book/blackburn-home-ed-forest-school-july-2026-with-sticks-and-worms-6901" target="_blank" rel="noopener">Book</a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#doing">The sessions</a>
-  <a href="#leader">Who runs it</a>
-  <a href="#game">Play Wriggle</a>
-  <a href="#kit">What to bring</a>
-  <a href="#faq">FAQs</a>
-  <a href="#book">Book a place</a>
+  <a href="#values">Our ethos</a>
+  <a href="#sessions">Sessions</a>
+  <a href="#game">Play the game</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#about">About Sahar</a>
+  <a href="#before">Before you come</a>
+  <a href="#findus">Find us</a>
+  <a href="#faq">FAQs &amp; booking</a>
 </div>
 
 <main id="main">
 
-<section class="hero">
-  <svg class="float-bit" style="top:14%;left:6%;width:44px;animation-delay:-1s" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c3 5-4 6-1.5 10.5C12 15 14.5 13 15 11c2 4-.5 11-4.5 11S3 17 5.5 12C7 9.5 9.5 9 12 2z"/></svg>
-  <svg class="float-bit" style="top:62%;left:11%;width:34px;animation-delay:-4s" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c2 4 8 5 8 10a8 8 0 1 1-16 0c0-5 6-6 8-10z"/></svg>
-  <svg class="float-bit" style="top:24%;right:8%;width:38px;animation-delay:-6.5s" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c2 4 8 5 8 10a8 8 0 1 1-16 0c0-5 6-6 8-10z"/></svg>
+<section class="hero" id="top">
+  <div class="canopy" aria-hidden="true">
+    <div class="sun"></div>
+    <div class="canopy-layer canopy-1" data-speed="0.10"><svg viewBox="0 0 1440 300" preserveAspectRatio="none"><path d="M0,80 Q60,20 140,70 T280,60 Q340,10 420,65 T560,55 Q620,15 700,60 T860,50 Q920,10 1000,60 T1160,55 Q1240,15 1320,60 T1440,50 L1440,0 L0,0 Z" fill="#0a160e"/></svg></div>
+    <div class="canopy-layer canopy-2" data-speed="0.2"><svg viewBox="0 0 1440 260" preserveAspectRatio="none"><path d="M0,60 Q80,110 180,55 T360,70 Q440,120 520,60 T700,75 Q780,125 860,55 T1040,70 Q1120,120 1200,58 T1440,68 L1440,0 L0,0 Z" fill="#13271a"/></svg></div>
+    <div class="canopy-layer canopy-3" data-speed="0.32"><svg viewBox="0 0 1440 220" preserveAspectRatio="none"><path d="M0,40 Q100,90 220,35 T460,50 Q560,95 660,38 T900,48 Q1000,92 1100,40 T1440,45 L1440,0 L0,0 Z" fill="#1c3a26"/></svg></div>
+    <div class="leaf" style="left:12%;--drift:50px;animation-duration:13s;">🍂</div>
+    <div class="leaf" style="left:34%;--drift:-40px;animation-duration:16s;animation-delay:-4s;">🍃</div>
+    <div class="leaf" style="left:60%;--drift:44px;animation-duration:11s;animation-delay:-7s;">🍂</div>
+    <div class="leaf" style="left:82%;--drift:-34px;animation-duration:14s;animation-delay:-2s;">🍃</div>
+  </div>
 
-  <div class="wrap hero-grid">
-    <div>
-      <span class="hero-eyebrow"><span class="pip"></span>HOME ED FOREST SCHOOL · BLACKBURN</span>
-      <h1>
-        <span class="l l1">Mud on</span>
-        <span class="l l2">their hands.</span>
-        <span class="l l3">Fire in the pit.</span>
-      </h1>
-      <p class="hero-sub">A monthly forest school for home educated children aged 4 to 14, on the canal bank in Blackburn. Cooking outdoors, dens, tools, and proper unhurried time in the woods.</p>
-      <div class="hero-cta">
-        <a class="btn" href="https://eequ.org/book/blackburn-home-ed-forest-school-july-2026-with-sticks-and-worms-6901" target="_blank" rel="noopener">Book a place</a>
-        <a class="btn hollow" href="#game">Play Wriggle →</a>
-      </div>
-    </div>
-
-    <div class="hero-card">
-      <h2>THE ESSENTIALS</h2>
-      <dl>
-        <div class="row"><dt>Ages</dt><dd>4 – 14</dd></div>
-        <div class="row"><dt>Where</dt><dd>Canalside, Blackburn</dd></div>
-        <div class="row"><dt>Bring</dt><dd>Packed lunch</dd></div>
-        <div class="row"><dt>Provided</dt><dd>Drinks, snacks, kit</dd></div>
-        <div class="row"><dt>Booking</dt><dd>Through Eequ</dd></div>
-      </dl>
+  <div class="wrap hero-inner">
+    <span class="eyebrow"><span class="full">HOME ED FOREST SCHOOL · BLACKBURN · AGES 4–14</span><span class="short">HOME ED FOREST SCHOOL · AGES 4–14</span></span>
+    <h1 class="h-title">
+      <span class="l1"><span class="word">Sticks</span></span>
+      <span class="l2"><span class="word">&amp; Worms</span></span>
+    </h1>
+    <p class="hero-sub">A home ed forest school on the canal bank at Mill Hill, Blackburn. Real fires, proper dens and muddy hands — a whole day outdoors for a mixed-age group of children who come back month after month.</p>
+    <div class="hero-cta">
+      <a class="btn-primary" href="https://eequ.org/book/blackburn-home-ed-forest-school-july-2026-with-sticks-and-worms-6901" target="_blank" rel="noopener">Book a session</a>
+      <a class="btn-ghost" href="#game">Or collect some sticks &amp; worms ↓</a>
     </div>
   </div>
+
+  <div class="undergrowth" aria-hidden="true"><svg viewBox="0 0 1440 150" preserveAspectRatio="none"><path d="M0,110 Q70,55 150,102 T300,92 Q380,45 460,98 T620,88 Q700,42 790,98 T950,92 Q1030,50 1120,102 T1290,92 Q1370,55 1440,102 L1440,150 L0,150 Z" fill="#0e1f14"/><path d="M0,128 Q90,92 190,126 T390,120 Q490,88 590,124 T800,118 Q900,88 1010,126 T1230,120 Q1330,94 1440,128 L1440,150 L0,150 Z" fill="#0a160e"/></svg></div>
+  <div class="scroll-cue" aria-hidden="true"><span class="line"></span><span class="label">SCROLL</span></div>
 </section>
 
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>FIRE • DENS • FORAGING • KNOTS • MUD • NATURE ART • WHITTLING • BUGS • CAMPFIRE COOKING • ALL WEATHERS •</span>
-    <span class="dupe">FIRE • DENS • FORAGING • KNOTS • MUD • NATURE ART • WHITTLING • BUGS • CAMPFIRE COOKING • ALL WEATHERS •</span>
+    <span class="copy1">Fire lighting · Den building · Bushcraft · Woodland games · Muddy hands · Ages 4–14 · Blackburn ·</span>
+    <span class="copy2">Fire lighting · Den building · Bushcraft · Woodland games · Muddy hands · Ages 4–14 · Blackburn ·</span>
   </div>
 </div>
 
-<section class="doing" id="doing">
+<section class="facts">
   <div class="wrap">
-    <div class="doing-head fade-up">
-      <span class="eyebrow-label">What a session involves</span>
-      <h2 class="big">Child-led, weather-whatever, hands properly dirty.</h2>
-      <p>Sessions run to the season rather than a timetable. There's a fire going, there's food being cooked on it, and there's a good chance everyone goes home muddier than they arrived.</p>
-    </div>
-    <div class="doing-grid">
-      <div class="do-card fade-up">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 5c3.2 4.8-3.2 6.4-1 10 1.1 1.9 3.7 1.1 4-1 2.1 3.2 0 9-5.3 9s-7.5-4.8-5-9c1.3-2.1 3.2-2.1 2.1-9z"/><path d="M6 27h20"/></svg>
-        <h3>Campfire cooking</h3>
-        <p>Food cooked on an open fire, made by the children. Tell us about allergies beforehand and we'll work round them.</p>
-      </div>
-      <div class="do-card fade-up">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 26L16 6l11 20"/><path d="M10 26l6-11 6 11"/></svg>
-        <h3>Dens and knots</h3>
-        <p>Rope work, lashings and shelters that actually stay up — then usually get taken apart and built better.</p>
-      </div>
-      <div class="do-card fade-up">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 28V16"/><path d="M16 16c-5 0-8-3.4-8-3.4s2.8-6 8-6 8 6 8 6S21 16 16 16z"/><path d="M11 22l-4 4"/><path d="M21 22l4 4"/></svg>
-        <h3>Hands in the soil</h3>
-        <p>Digging, planting and finding out what lives under a log. Worms very much included.</p>
-      </div>
-      <div class="do-card fade-up">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="10"/><path d="M16 6v20M6 16h20"/><path d="M9 9l14 14M23 9L9 23"/></svg>
-        <h3>Foraging and wildlife</h3>
-        <p>Learning what's growing around the site, what's safe, and what's living in the pond and hedgerows.</p>
-      </div>
-      <div class="do-card fade-up">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 25l12-12"/><path d="M18 12l4-5 4 4-5 4z"/><path d="M6 26l3-1-2-2z"/></svg>
-        <h3>Tools and whittling</h3>
-        <p>Real tools, taught properly, one-to-one before anyone uses them on their own.</p>
-      </div>
-      <div class="do-card fade-up">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20c4-4 8-4 12 0"/><path d="M8 12c3-3 6-3 9 0"/><circle cx="23" cy="21" r="4"/><path d="M26 24l3 3"/></svg>
-        <h3>Nature art</h3>
-        <p>Making things out of what's on the ground — leaf prints, mud paint, stick sculptures, all of it temporary.</p>
-      </div>
-    </div>
+    <div class="fact"><b>4–14</b><span>all ages in one mixed group</span></div>
+    <div class="fact"><b>10–2</b><span>a full day out, not a rushed hour</span></div>
+    <div class="fact"><b data-count="8" data-suffix="+">0</b><span>years working with children</span></div>
+    <div class="fact"><b>Monthly</b><span>at Canalside, Mill Hill</span></div>
   </div>
 </section>
 
-<svg class="burrow" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
-  <path d="M0,30 C100,4 200,56 300,30 C400,4 500,56 600,30 C700,4 800,56 900,30 C1000,4 1100,56 1180,30" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="1200" stroke-linecap="round"/>
-  <circle cx="1184" cy="30" r="7" fill="currentColor"/>
-</svg>
-
-<section class="leader" id="leader">
-  <div class="wrap leader-grid">
+<section class="values" id="values">
+  <div class="wrap values-grid">
     <div class="fade-up">
-      <span class="eyebrow-label">Who runs it</span>
-      <h2 class="big">A teacher, a forest school leader, and a Scout leader — same person.</h2>
-    </div>
-    <div class="fade-up">
-      <p class="lead">Sticks and Worms is run by a primary school teacher who works across year groups, qualified as a forest school leader and a Scout leader for 10 to 14 year olds. Eight years and counting working with children, a lot of it with children with additional needs — which matters, because plenty of home ed families are here for exactly that reason.</p>
-      <div class="creds">
-        <div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Qualified forest school leader</span></div>
-        <div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Primary school teacher, all year groups</span></div>
-        <div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Scout leader for ages 10–14</span></div>
-        <div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Outdoor first aid trained</span></div>
-        <div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Enhanced DBS on the update service</span></div>
-        <div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Extensive experience with additional needs</span></div>
+      <span class="kicker">What we stand for</span>
+      <h2>A wood, a fire, and a <em>reason to keep it small</em>.</h2>
+      <p class="values-lead">Sticks and Worms began as forest school sessions run by one teacher who would always rather be outside. It recently became <strong>Sticks and Worms Nature Network CIC</strong> — a community interest company — so that what it earns goes back into running more sessions for more children, rather than into anyone's pocket.</p>
+      <div class="stamp">
+        <span class="ring">EST.<br>CIC</span>
+        <span class="st-txt"><b>Newly established Community Interest Company.</b><br>Not-for-profit · run for the children who come.</span>
       </div>
     </div>
+    <ul class="creed fade-up">
+      <li><h3>Outdoors, whatever the sky's doing</h3><p>Rain is half of it. We go out in the weather and dress for it — that's where the good days happen.</p></li>
+      <li><h3>Child-led, not clipboard-led</h3><p>Forest school follows the children. They choose what to get stuck into, and the learning comes with it.</p></li>
+      <li><h3>Room for every kind of child</h3><p>Lots of experience with additional needs, and a separate SEND nature club too. Tell us what your child needs.</p></li>
+      <li><h3>Mixed ages, together</h3><p>Four to fourteen in one group. Older ones look out for younger ones — the way it works in the real world.</p></li>
+    </ul>
   </div>
 </section>
 
-<section class="safety">
+<section class="sessions" id="sessions">
   <div class="wrap">
-    <div class="safety-head fade-up">
-      <span class="eyebrow-label">The boring but important bit</span>
-      <h2 class="big">Everything's in place before anyone lights a match.</h2>
-      <p>Forest school involves fire and tools, so the paperwork matters as much as the fun. All of this is declared on the booking listing too.</p>
+    <div class="sec-head fade-up">
+      <span class="kicker">In a session</span>
+      <h2>What the children actually do</h2>
+      <p>Forest school is learner-led, so no two days run the same. These are the things that come round most often.</p>
     </div>
-    <div class="safety-list fade-up">
-      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Enhanced DBS</span>
-      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Risk assessment</span>
-      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Public liability insurance</span>
-      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Safeguarding training</span>
-      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>First aid training</span>
-      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>First aid kit on site</span>
+    <div class="activity-grid">
+      <div class="activity fade-up"><span class="glyph"><svg viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 5c3 4.5-3 6-1 9.5 1 1.8 3.5 1 3.7-1 2 3 0 8.5-5 8.5s-7-4.5-4.7-8.5c1.2-2 3-2 2-8.5z"/><path d="M6 27h20"/></svg></span><h3>The fire circle</h3><p>Children help build and light the fire, and learn how to do it safely themselves.</p></div>
+      <div class="activity fade-up"><span class="glyph"><svg viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17h18a9 9 0 01-9 9 9 9 0 01-9-9z"/><path d="M12 12c0-2 2-2 2-4M18 12c0-2 2-2 2-4"/><path d="M4 27h24"/></svg></span><h3>Cooking on the fire</h3><p>Campfire food made outdoors — do tell us about any allergies beforehand.</p></div>
+      <div class="activity fade-up"><span class="glyph"><svg viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 25L16 6l12 19"/><path d="M10 25L16 15l6 10"/></svg></span><h3>Dens &amp; hammocks</h3><p>Real shelters built from what's around, knots and all.</p></div>
+      <div class="activity fade-up"><span class="glyph"><svg viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 27l10-19"/><path d="M20 8.5l5.5-3 3 5-5.5 3z"/><path d="M6 20l5 2"/></svg></span><h3>Bushcraft &amp; skills</h3><p>Tool use, knots and the practical things that come with being outdoors.</p></div>
+      <div class="activity fade-up"><span class="glyph"><svg viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="12" r="4"/><circle cx="21" cy="20" r="4"/><path d="M4 27c2-4 5-5 7-5M28 8c-2 3-5 4-7 4"/></svg></span><h3>Woodland games</h3><p>Traditional outdoor games — the loud, running-about kind.</p></div>
+      <div class="activity fade-up"><span class="glyph"><svg viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 27V16"/><path d="M16 16c-4.5 0-7.5-3-7.5-3s2.5-5.5 7.5-5.5 7.5 5.5 7.5 5.5-3 3-7.5 3z"/><path d="M8 27h16"/></svg></span><h3>Seasonal crafts</h3><p>Making and art from whatever the season gives us.</p></div>
+      <div class="activity fade-up"><span class="glyph"><svg viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22c4-4 8 4 12 0s8 4 10 0"/><path d="M5 15c4-4 8 4 12 0s8 4 10 0"/><circle cx="24" cy="8" r="2.5"/></svg></span><h3>Nature trails</h3><p>Getting out around the site and finding what's living there.</p></div>
+      <div class="activity fade-up"><span class="glyph"><svg viewBox="0 0 32 32" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 24h24"/><path d="M9 24c0-5 3-8 7-8s7 3 7 8"/><path d="M16 16V8"/><path d="M16 11c-3 0-4-2-4-4 3 0 4 2 4 4z"/></svg></span><h3>Hands in the soil</h3><p>Digging, planting and growing — the muddy end of the day.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ================= GAME ================= -->
-<section class="game-sec" id="game">
+<!-- ===================== GAME ===================== -->
+<section class="game-section" id="game">
   <div class="wrap">
     <div class="game-head fade-up">
-      <span class="eyebrow-label">A bit of fun</span>
-      <h2 class="big">Play <em>Wriggle</em>.</h2>
-      <p>You're the worm. Burrow about, eat the sticks, get longer. Go off one edge and you'll pop out the other — the only thing that'll finish you is doubling back into yourself.</p>
+      <span class="kicker" style="color:var(--amber)">Have a go</span>
+      <h2>The <em>Forage</em></h2>
+      <p>Leg it through the woods, grab every stick and worm you can, and stay out of the nettles and brambles. Three lives, and it speeds up. Worms are worth more — they're harder to catch.</p>
     </div>
-
     <div class="game-shell fade-up">
       <div class="game-hud">
-        <div class="g"><span>STICKS <b id="wScore">0</b></span><span>BEST <b id="wBest">0</b></span></div>
-        <div class="g"><span>LENGTH <b id="wLen">3</b></span></div>
+        <div class="hud-group"><span>SCORE <span class="hud-val" id="hudScore">0</span></span><span>BEST <span class="hud-val" id="hudBest">0</span></span></div>
+        <div class="hud-group"><span>STICKS <span class="hud-val" id="hudSticks">0</span></span><span>WORMS <span class="hud-val worm" id="hudWorms">0</span></span><div class="hud-lives" id="hudLives" aria-label="Lives remaining"><i></i><i></i><i></i></div></div>
       </div>
-
-      <div class="canvas-wrap">
-        <canvas id="wrigg" aria-label="Wriggle: a worm game. Use arrow keys or swipe to steer."></canvas>
-
-        <div class="g-overlay" id="wStart">
-          <h3>Meet <em>the worm</em></h3>
-          <p>Steer with the arrow keys, or swipe on a phone. Every stick makes you longer.</p>
-          <span class="keys">↑ ↓ ← → &nbsp;or&nbsp; W A S D</span>
-          <button class="btn pale" id="wStartBtn">Start wriggling</button>
+      <div class="game-canvas-wrap">
+        <canvas id="gameCanvas" aria-label="Foraging game. Use arrow keys or drag to move."></canvas>
+        <div class="game-overlay" id="startOverlay">
+          <h3>The <em>Forage</em></h3>
+          <p>Move left and right to collect sticks (10 points) and worms (30 points). Nettles, brambles and stumps cost a life.</p>
+          <span class="keys">← → or A / D &nbsp;·&nbsp; on a phone, just drag</span>
+          <button class="game-btn" id="startBtn">Start foraging</button>
         </div>
-
-        <div class="g-overlay hidden" id="wOver">
-          <span class="keys">YOU ATE YOURSELF</span>
-          <div class="g-score" id="wFinal">0</div>
-          <p id="wNote">Worms do that sometimes.</p>
-          <div class="g-actions">
-            <button class="btn pale" id="wRetry">Go again</button>
-            <a class="btn hollow" href="https://eequ.org/book/blackburn-home-ed-forest-school-july-2026-with-sticks-and-worms-6901" target="_blank" rel="noopener">Find real worms</a>
+        <div class="game-overlay hidden" id="overOverlay">
+          <span class="keys">STRAIGHT INTO THE NETTLES</span>
+          <div class="final-score" id="finalScore">0</div>
+          <div class="final-break" id="finalBreak">0 sticks · 0 worms</div>
+          <p class="final-note" id="finalNote">Have another go.</p>
+          <div class="overlay-actions">
+            <button class="game-btn" id="retryBtn">Forage again</button>
+            <a class="game-btn secondary" href="https://eequ.org/book/blackburn-home-ed-forest-school-july-2026-with-sticks-and-worms-6901" target="_blank" rel="noopener">Do it for real</a>
           </div>
         </div>
       </div>
+      <div class="game-foot">In real life we mostly leave the worms where they are.</div>
+    </div>
+  </div>
+</section>
 
-      <div class="pad" aria-hidden="true">
-        <button class="up" data-dir="up">▲</button>
-        <button class="left" data-dir="left">◀</button>
-        <button class="down" data-dir="down">▼</button>
-        <button class="right" data-dir="right">▶</button>
+<section class="homeed">
+  <div class="wrap">
+    <div class="sec-head fade-up">
+      <span class="kicker">Why home ed families come</span>
+      <h2>Built around how home ed actually works</h2>
+    </div>
+    <div class="he-cards">
+      <div class="he-card fade-up"><span class="tag">MIXED AGES, ONE GROUP</span><h3>Siblings stay together</h3><p>Ages 4 to 14 come to the same session. No splitting children across different rooms and times, and the older ones naturally help the younger ones.</p></div>
+      <div class="he-card fade-up"><span class="tag">A FULL DAY</span><h3>Not a rushed hour</h3><p>Sessions run 10am to 2pm with a proper lunch break, so there's time to settle in, get stuck into something and finish it.</p></div>
+      <div class="he-card fade-up"><span class="tag">THE SAME FACES</span><h3>A group that builds up</h3><p>Families come back month to month, so children get a regular social group outdoors — and the grown-ups get to know each other too.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <span class="kicker fade-up">What parents say</span>
+    <h2 class="fade-up">The children ask when the next one is.</h2>
+
+    <div class="rev-feature fade-up">
+      <blockquote>“My boys often take time to feel comfortable with new people, but Sahar made such an effort to include them, give them a role in the group and make them feel valued — they were so relaxed. Having someone this experienced to learn and explore with is invaluable to us.”</blockquote>
+      <cite>Sabiha · September 2023</cite>
+    </div>
+
+    <div class="rev-pair">
+      <div class="rev-card fade-up">
+        <div class="stars" aria-label="Five stars">★★★★★</div>
+        <p>“Amazing sessions so far. The activities are well thought out and carefully chosen, giving the children a real breadth of experience. The girls love being outdoors and are excited every week to find out what they'll be doing next. A huge thank you to Sahar for her enthusiasm and gentle nature.”</p>
+        <cite>Zainab · August 2023</cite>
+      </div>
+      <div class="rev-card fade-up">
+        <div class="stars" aria-label="Five stars">★★★★★</div>
+        <p>“The mentor was great and approachable, and my children were very comfortable with her. A great experience — they'd love to attend again whenever it's available. Thank you!”</p>
+        <cite>Javaria · October 2023</cite>
+      </div>
+    </div>
+
+    <p class="rev-note fade-up">More parent reviews are on our <a href="https://eequ.org/book/blackburn-home-ed-forest-school-july-2026-with-sticks-and-worms-6901" target="_blank" rel="noopener">Eequ booking page</a>.</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="portrait fade-up">
+      <!-- Swap this photo-slot for: <img src="sahar.jpg" alt="Sahar, forest school leader" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;"> -->
+      <div class="photo-slot">
+        <div class="ph-inner">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8a2 2 0 012-2h2l1.5-2h7L18 6h1a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><circle cx="12" cy="12.5" r="3.5"/></svg>
+          <span>A photo of Sahar goes here</span>
+        </div>
+      </div>
+      <span class="cap">Sahar · Forest School Leader</span>
+    </div>
+    <div class="fade-up">
+      <span class="kicker">Who runs it</span>
+      <h2>Hi, I'm <em>Sahar</em>.</h2>
+      <div class="about-copy">
+        <p>I'm a <strong>primary school teacher</strong> and I work right across the year groups. Outside the classroom I'm a <strong>qualified Forest School Leader</strong> and a <strong>Scout leader for 10 to 14 year olds</strong> — so a mixed-age group is completely normal to me, not a problem to solve.</p>
+        <p>I've spent <strong>over eight years working with children</strong>, including a lot of time supporting children with additional needs. I'm a qualified Lowland Leader too, so I lead walks for all ages, and honestly I'll take any excuse to be outside — walking, camping, or knee-deep in a wood with a group of children.</p>
+        <p>The practical bits, because they matter: I'm outdoor first aid trained, and I'm on the DBS update service with a full enhanced check.</p>
+      </div>
+      <div class="creds">
+        <span>Qualified Forest School Leader</span>
+        <span>Primary school teacher</span>
+        <span>Scout leader (10–14)</span>
+        <span>Lowland Leader</span>
+        <span>Outdoor first aid trained</span>
+        <span>Enhanced DBS · update service</span>
+        <span>SEND experience</span>
       </div>
     </div>
   </div>
 </section>
 
-<section class="kit" id="kit">
+<section class="gallery">
   <div class="wrap">
-    <div class="kit-head fade-up">
-      <span class="eyebrow-label">Before you come</span>
-      <h2 class="big">What to bring, what to wear.</h2>
+    <div class="sec-head fade-up">
+      <span class="kicker">From our sessions</span>
+      <h2>A look at the good, muddy days</h2>
+      <p>These are placeholders for now — drop your own photos in, or see the latest over on Instagram.</p>
     </div>
-    <div class="kit-grid">
-      <div class="kit-col fade-up">
-        <h3><svg viewBox="0 0 24 24" fill="none" stroke="var(--moss)" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Pack these</h3>
-        <ul>
-          <li>A packed lunch and a full water bottle — we break for lunch</li>
-          <li>Waterproof coat and trousers, whatever the forecast says</li>
-          <li>Wellies or boots that fasten on properly</li>
-          <li>Warm layers — the canal bank is colder than town</li>
-          <li>A complete change of clothes, including socks</li>
-          <li>Gloves and a hat in the colder months</li>
-        </ul>
-      </div>
-      <div class="kit-col warn fade-up">
-        <h3><svg viewBox="0 0 24 24" fill="none" stroke="var(--rust)" stroke-width="2" stroke-linecap="round"><path d="M12 8v5M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg>Worth knowing</h3>
-        <ul>
-          <li>The site has compost toilets, not flushing ones</li>
-          <li>Children cook during the session — send allergy details in advance</li>
-          <li>Clothes will get muddy, singed at the edges, and possibly stay that way</li>
-          <li>Sessions run in rain; we only stop for genuinely unsafe conditions</li>
-          <li>Free parking on site at Canalside</li>
-        </ul>
-      </div>
+    <div class="po-grid">
+      <figure class="polaroid fade-up"><span class="pic"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100" fill="#cdbb95"/><path d="M0 74 Q25 60 50 74 T100 74 V100 H0Z" fill="#3f6b32"/><path d="M46 74c2-14 6-14 8 0z" fill="#5a3d28"/><path d="M40 56l10 8 10-8-10-4z" fill="#c15f3f"/><circle cx="78" cy="20" r="9" fill="#dfa049"/></svg></span><figcaption class="cap">The fire circle</figcaption></figure>
+      <figure class="polaroid fade-up"><span class="pic"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100" fill="#c7b691"/><path d="M20 82L50 30l30 52z" fill="#5a3d28"/><path d="M30 82L50 46l20 36z" fill="#3f6b32"/><path d="M0 84h100" stroke="#4d3a24" stroke-width="4"/></svg></span><figcaption class="cap">Den building</figcaption></figure>
+      <figure class="polaroid fade-up"><span class="pic"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100" fill="#cdbb95"/><path d="M20 60c15-10 45-10 60 0" stroke="#dd8b78" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M25 74c12-8 38-8 50 0" stroke="#c15f3f" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="30" cy="30" r="6" fill="#5f7f45"/></svg></span><figcaption class="cap">Worm hunting</figcaption></figure>
+      <figure class="polaroid fade-up"><span class="pic"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100" fill="#c7b691"/><circle cx="50" cy="52" r="20" fill="#3f6b32"/><circle cx="50" cy="52" r="9" fill="#dfa049"/><path d="M50 30v-8M50 82v-8M28 52h-8M80 52h-8" stroke="#5a3d28" stroke-width="4" stroke-linecap="round"/></svg></span><figcaption class="cap">Bug hunt</figcaption></figure>
+      <figure class="polaroid fade-up"><span class="pic"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100" fill="#cdbb95"/><path d="M0 80 Q30 66 55 80 T100 78 V100H0Z" fill="#4d3a24"/><path d="M20 80l8-16 8 16zM60 80l10-20 10 20z" fill="#3f6b32"/></svg></span><figcaption class="cap">Woodland walk</figcaption></figure>
+      <figure class="polaroid fade-up"><span class="pic"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100" fill="#c7b691"/><path d="M0 66h100V100H0z" fill="#5a3d28"/><path d="M50 66V44M50 50c-6 0-9-4-9-9 6 0 9 4 9 9zM50 54c6 0 9-4 9-9-6 0-9 4-9 9z" fill="#3f6b32" stroke="#3f6b32" stroke-width="2"/></svg></span><figcaption class="cap">Hands in the soil</figcaption></figure>
     </div>
+    <p class="ig-line fade-up">See what we've been up to lately on Instagram — <a href="https://www.instagram.com/sticksandwormsforestschool" target="_blank" rel="noopener">@sticksandwormsforestschool</a></p>
+  </div>
+</section>
 
-    <div class="nut-note fade-up">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg>
-      <div>
-        <b>Absolutely no nuts on site</b>
-        <span>Please check everything in your child's lunch bag before you set off. This one isn't flexible.</span>
+<section class="poster-section">
+  <div class="wrap poster-wrap">
+    <div class="poster-text fade-up">
+      <span class="kicker">Next up</span>
+      <h2>One day a month, on the canal bank.</h2>
+      <p>The Blackburn home ed group meets monthly at Canalside Activity and Environment Centre in Mill Hill. Places are limited each time, so it's worth booking early. Dates go up on Eequ — here's the shape of a typical session.</p>
+      <a class="btn-primary" href="https://eequ.org/book/blackburn-home-ed-forest-school-july-2026-with-sticks-and-worms-6901" target="_blank" rel="noopener">See dates &amp; book</a>
+    </div>
+    <div class="flyer fade-up" role="img" aria-label="Session flyer: Blackburn Home Ed Forest School, monthly at Canalside, ages 4 to 14, 10am to 2pm">
+      <div class="f-top">Home Ed Forest School</div>
+      <h3>Blackburn <em>at Canalside</em></h3>
+      <div class="f-where">Mill Hill · on the Leeds &amp; Liverpool Canal</div>
+      <div class="f-rows">
+        <div class="f-row"><span>Ages</span><span>4 – 14 years</span></div>
+        <div class="f-row"><span>Time</span><span>10am – 2pm</span></div>
+        <div class="f-row"><span>Bring</span><span>Packed lunch (no nuts)</span></div>
+        <div class="f-row"><span>Next date</span><span>See Eequ</span></div>
       </div>
+      <span class="f-cta">Book on Eequ</span>
+      <svg class="f-doodle" viewBox="0 0 100 100" fill="none" stroke="#dfa049" stroke-width="3" aria-hidden="true"><path d="M50 90L50 40"/><path d="M50 55C40 45 30 50 28 40 40 38 48 45 50 55Z"/><path d="M50 50C60 40 70 45 72 35 60 33 52 40 50 50Z"/></svg>
+    </div>
+  </div>
+</section>
+
+<section class="before" id="before">
+  <div class="wrap">
+    <div class="sec-head fade-up">
+      <span class="kicker">Before you come</span>
+      <h2>The practical bits</h2>
+      <p>Everything worth knowing the night before, so nobody turns up in the wrong shoes.</p>
+    </div>
+    <div class="before-steps">
+      <div class="bstep fade-up"><h3>Wrap up warm</h3><p>Old clothes you don't mind ruining, wellies or boots that fasten on, waterproofs and layers. It's a canal bank — colder than town, and we're out in it all day.</p></div>
+      <div class="bstep fade-up"><h3>Bring a packed lunch</h3><p>We break for lunch, so send food from home. Drinks, snacks and all the equipment are provided.</p></div>
+      <div class="bstep alert fade-up"><h3>No nuts on site</h3><p>Please check what you pack — nothing containing nuts. And tell us about any allergies beforehand, since the children do cooking.</p></div>
+      <div class="bstep fade-up"><h3>Toilets &amp; getting there</h3><p>The site has compost toilets. It's Canalside Activity and Environment Centre, Bonsall Street, Blackburn, BB2 4DD.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="provided">
+  <div class="wrap prov-grid">
+    <div class="prov-block fade-up">
+      <span class="kicker">What's provided</span>
+      <h2>What we bring</h2>
+      <p>You bring a packed lunch and the right clothes — we sort the rest.</p>
+      <ul class="checklist">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Drinks</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Snacks</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>All equipment</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Safety kit</li>
+      </ul>
+    </div>
+    <div class="prov-block fade-up">
+      <span class="kicker">Peace of mind</span>
+      <h2>The paperwork you'd want us to have</h2>
+      <p>Sessions involve fire and tools, so this matters. Everything below is in place and listed on our Eequ booking page.</p>
+      <div class="badges">
+        <span>Enhanced DBS</span>
+        <span>Basic DBS</span>
+        <span>Risk assessment</span>
+        <span>Public liability insurance</span>
+        <span>Safeguarding training</span>
+        <span>First aid training</span>
+        <span>First aid kit on site</span>
+        <span>Smoke detector</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="findus" id="findus">
+  <div class="wrap">
+    <div class="map-head">
+      <div class="fade-up">
+        <span class="kicker">Find us</span>
+        <h2>On the canal at Mill Hill</h2>
+      </div>
+      <div class="addr fade-up">Canalside Activity and Environment Centre<br>Bonsall Street, Mill Hill<br>Blackburn, BB2 4DD</div>
+    </div>
+    <div class="map-frame fade-up">
+      <iframe title="Map showing Canalside Activity and Environment Centre, Blackburn" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-2.5150%2C53.7305%2C-2.4970%2C53.7405&amp;layer=mapnik&amp;marker=53.7355%2C-2.5060"></iframe>
+    </div>
+    <div class="map-actions fade-up">
+      <a class="map-btn" href="https://maps.app.goo.gl/evpPM2kJXRTBeJzs7" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Open in Google Maps
+      </a>
+      <a class="map-btn alt" href="https://maps.apple.com/?q=Canalside%20Activity%20and%20Environment%20Centre%2C%20Bonsall%20Street%2C%20Blackburn%2C%20BB2%204DD" target="_blank" rel="noopener">Open in Apple Maps</a>
     </div>
   </div>
 </section>
 
 <section class="faq" id="faq">
-  <div class="wrap">
-    <div class="faq-head fade-up">
-      <span class="eyebrow-label">Questions</span>
-      <h2 class="big">Things parents ask first.</h2>
+  <div class="wrap faq-grid">
+    <div class="fade-up">
+      <span class="kicker">Booking &amp; questions</span>
+      <div class="booking-box">
+        <h3>How booking works</h3>
+        <p>Sessions are booked through <strong>Eequ</strong>. Pick your dates on the listing and you'll get confirmation details. Places are limited, so it's best to book early.</p>
+        <p>You can cancel up to <strong>48 hours before</strong> a session for a full refund.</p>
+        <p class="fineprint">Because each session is a leisure activity on a set date, the 14-day cooling-off period under the Consumer Contracts Regulations 2013 doesn't apply. As with any activity, it's the booker's responsibility to be satisfied with the safety arrangements before booking.</p>
+      </div>
     </div>
-    <div class="faq-list fade-up">
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Do I stay with my child?
-          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
-        <div class="faq-a"><p>Have a word when you book. It depends a lot on your child's age and how they get on in a group — some families stay, some drop off, and both are completely normal at home ed sessions.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">My child has additional needs. Will they be alright?
-          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
-        <div class="faq-a"><p>Very likely, and it's worth telling us about it before the day rather than on it. There's a lot of experience here with children with additional needs, and forest school suits many children who find indoor group settings hard going. The more we know in advance, the better we can plan the session round them.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Is there really fire and are there really tools?
-          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
-        <div class="faq-a"><p>Yes to both — that's forest school rather than a walk in the woods. Everything is taught first, supervised throughout, and covered by a written risk assessment. Children are shown how to use a tool one-to-one before they use it on their own.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">What ages actually mix well?
-          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
-        <div class="faq-a"><p>Sessions take 4 to 14 year olds and activities get pitched so there's something for both ends. Older children often end up helping the younger ones, which is half the point of a mixed home ed group.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">What if we need to cancel?
-          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
-        <div class="faq-a"><p>Cancel at least 48 hours before the session starts and you get a full refund. That's handled through Eequ, where you booked.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">How do I book?
-          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
-        <div class="faq-a"><p>Everything goes through the Eequ listing — dates, places and payment in one go. If a date shows as full you can register your interest there and you'll hear when the next one opens.</p></div>
+    <div class="fade-up">
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Do I stay with my child?<svg class="chev" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>It depends on the session — some are drop-off and some are stay-and-play. The details are on the Eequ listing when you book, or message us and we'll tell you straight away.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">My children are 5 and 12 — will that work?<svg class="chev" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>Yes. The group is 4 to 14 and mixed ages are the norm here. Activities are open-ended enough that a five year old and a twelve year old can do the same thing at their own level.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">What about children with additional needs?<svg class="chev" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>Very welcome. There's a lot of experience here supporting children with additional needs, and Sticks and Worms also runs a dedicated SEND nature club. Message before you book and tell us what your child needs — it's much easier to plan for than to react to.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Is fire and tool use safe?<svg class="chev" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>Children work with real fire and real tools, because that's what forest school is — but always with a brief first, clear rules, close supervision and a risk assessment behind it. The leader is outdoor first aid trained with a first aid kit on site.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">What if it rains?<svg class="chev" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>We go out anyway — rain is half of forest school. Send waterproofs and a full change of clothes. We'd only cancel for genuinely unsafe conditions, and we'd let you know as early as we could.</p></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="book" id="book">
+<section class="cta" id="contact">
   <div class="wrap">
-    <h2>Come and get filthy with us.</h2>
-    <p class="sub">Places are limited and home ed sessions fill up. Booking, dates and prices all live on Eequ.</p>
-    <div class="book-actions">
-      <a class="btn pale" href="https://eequ.org/book/blackburn-home-ed-forest-school-july-2026-with-sticks-and-worms-6901" target="_blank" rel="noopener">Book on Eequ</a>
-      <a class="btn hollow" href="https://www.instagram.com/sticksandwormsforestschool" target="_blank" rel="noopener">Follow on Instagram</a>
-    </div>
-    <div class="venue">
-      <b>Where we meet</b>
-      Canalside Activity and Environment Centre, Bonsall Street, Blackburn, BB2 4DD.
-      <a href="https://maps.app.goo.gl/evpPM2kJXRTBeJzs7" target="_blank" rel="noopener">Open in Maps →</a>
+    <h2 class="fade-up">Come and get <em>muddy</em> with us.</h2>
+    <p class="fade-up">Places are limited each month. Book on Eequ, or message us on Instagram if you'd like to ask something first.</p>
+    <div class="cta-actions fade-up">
+      <a class="btn-primary" href="https://eequ.org/book/blackburn-home-ed-forest-school-july-2026-with-sticks-and-worms-6901" target="_blank" rel="noopener">Book a session</a>
+      <a class="btn-ghost" href="https://www.instagram.com/sticksandwormsforestschool" target="_blank" rel="noopener">Message us on Instagram</a>
     </div>
   </div>
 </section>
@@ -619,328 +777,348 @@
 </main>
 
 <footer>
-  <span>STICKS AND WORMS — FOREST SCHOOL, BLACKBURN</span>
-  <span><a href="https://www.instagram.com/sticksandwormsforestschool" target="_blank" rel="noopener">INSTAGRAM</a> · <a href="https://eequ.org/book/blackburn-home-ed-forest-school-july-2026-with-sticks-and-worms-6901" target="_blank" rel="noopener">BOOK ON EEQU</a></span>
+  <span>STICKS AND WORMS NATURE NETWORK CIC — FOREST SCHOOL ACROSS THE NORTH WEST</span>
+  <div class="socials">
+    <a href="https://www.instagram.com/sticksandwormsforestschool" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://eequ.org/book/blackburn-home-ed-forest-school-july-2026-with-sticks-and-worms-6901" target="_blank" rel="noopener">Book on Eequ</a>
+  </div>
 </footer>
 
 <div class="book-bar" id="bookBar">
-  <a href="https://eequ.org/book/blackburn-home-ed-forest-school-july-2026-with-sticks-and-worms-6901" target="_blank" rel="noopener">Book a place</a>
+  <a href="https://eequ.org/book/blackburn-home-ed-forest-school-july-2026-with-sticks-and-worms-6901" target="_blank" rel="noopener">Book a session</a>
 </div>
 
 <script>
 (function(){
   'use strict';
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var coarse  = window.matchMedia('(pointer: coarse)').matches;
 
-  /* nav */
+  window.addEventListener('load', function(){
+    setTimeout(function(){ document.getElementById('preload').classList.add('done'); }, reduced ? 0 : 750);
+  });
+
+  var bar = document.getElementById('progress');
+  var bookBar = document.getElementById('bookBar');
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop/max)*100 : 0) + '%';
+    bookBar.classList.toggle('show', h.scrollTop > window.innerHeight * 0.85);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
   var menuBtn = document.getElementById('menuBtn');
-  var mm = document.getElementById('mobileMenu');
-  function closeMenu(){ menuBtn.setAttribute('aria-expanded','false'); mm.classList.remove('open'); }
+  var mobileMenu = document.getElementById('mobileMenu');
+  function closeMenu(){ menuBtn.setAttribute('aria-expanded','false'); mobileMenu.classList.remove('open'); }
   menuBtn.addEventListener('click', function(){
     var open = menuBtn.getAttribute('aria-expanded') === 'true';
     menuBtn.setAttribute('aria-expanded', String(!open));
-    mm.classList.toggle('open', !open);
+    mobileMenu.classList.toggle('open', !open);
   });
-  mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+  mobileMenu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeMenu(); });
 
-  /* sticky book bar */
-  var bookBar = document.getElementById('bookBar');
-  window.addEventListener('scroll', function(){
-    bookBar.classList.toggle('show', window.scrollY > window.innerHeight * 0.75);
-  }, {passive:true});
-
-  /* reveals */
   var io = new IntersectionObserver(function(en){
     en.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('visible'); });
   }, {threshold:0.12});
   document.querySelectorAll('.fade-up').forEach(function(el){ io.observe(el); });
 
-  var bio = new IntersectionObserver(function(en){
-    en.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('drawn'); bio.unobserve(e.target); } });
-  }, {threshold:0.4});
-  document.querySelectorAll('.burrow').forEach(function(el){ bio.observe(el); });
+  var statIO = new IntersectionObserver(function(en){
+    en.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var el = e.target;
+      var target = parseInt(el.getAttribute('data-count'), 10);
+      var suffix = el.getAttribute('data-suffix') || '';
+      statIO.unobserve(el);
+      if(reduced){ el.textContent = target + suffix; return; }
+      var start = performance.now(), dur = 1100;
+      (function tick(now){
+        var p = Math.min((now-start)/dur, 1);
+        var eased = 1 - Math.pow(1-p, 3);
+        el.textContent = Math.floor(eased*target) + suffix;
+        if(p < 1) requestAnimationFrame(tick); else el.textContent = target + suffix;
+      })(performance.now());
+    });
+  }, {threshold:0.5});
+  document.querySelectorAll('.fact b[data-count]').forEach(function(el){ statIO.observe(el); });
 
-  /* faq */
+  if(!reduced){
+    var layers = document.querySelectorAll('.canopy-layer');
+    var ticking = false;
+    window.addEventListener('scroll', function(){
+      if(ticking) return;
+      ticking = true;
+      requestAnimationFrame(function(){
+        var y = window.scrollY;
+        layers.forEach(function(l){ l.style.transform = 'translateY(' + (y*parseFloat(l.getAttribute('data-speed'))) + 'px)'; });
+        ticking = false;
+      });
+    }, {passive:true});
+  }
+
   document.querySelectorAll('.faq-item').forEach(function(item){
-    var btn = item.querySelector('.faq-q'), ans = item.querySelector('.faq-a');
+    var btn = item.querySelector('.faq-q');
+    var ans = item.querySelector('.faq-a');
     btn.addEventListener('click', function(){
-      var wasOpen = item.classList.contains('open');
+      var isOpen = item.classList.contains('open');
       document.querySelectorAll('.faq-item.open').forEach(function(o){
         o.classList.remove('open');
         o.querySelector('.faq-a').style.maxHeight = null;
         o.querySelector('.faq-q').setAttribute('aria-expanded','false');
       });
-      if(!wasOpen){
-        item.classList.add('open');
-        ans.style.maxHeight = ans.scrollHeight + 'px';
-        btn.setAttribute('aria-expanded','true');
-      }
+      if(!isOpen){ item.classList.add('open'); ans.style.maxHeight = ans.scrollHeight + 'px'; btn.setAttribute('aria-expanded','true'); }
     });
   });
 
-  /* ================= WRIGGLE ================= */
-  var cvs = document.getElementById('wrigg');
+  /* ================= THE FORAGE ================= */
+  var cvs = document.getElementById('gameCanvas');
   var ctx = cvs.getContext('2d');
-  var COLS = 20, ROWS = 15;
-  var W = 0, H = 0, cell = 0, dpr = 1;
+  var W = 0, H = 0, dpr = 1;
+  var state = 'idle', best = 0;
+  var player, hazards, finds, particles, dust;
+  var speed, score, sticks, worms, lives, invuln, shake, spawnTimer, groundOffset, edgeOffset, runPhase, wiggle;
+  var keys = {left:false, right:false};
+  var pointerActive = false, rafId = null, inView = true;
 
-  var worm, dir, queued, food, score, best = 0, state = 'idle';
-  var tickMs = 200, acc = 0, last = 0, raf = null, inView = true, pop = [];
-
-  var elScore = document.getElementById('wScore');
-  var elBest  = document.getElementById('wBest');
-  var elLen   = document.getElementById('wLen');
-  var ovStart = document.getElementById('wStart');
-  var ovOver  = document.getElementById('wOver');
-  var elFinal = document.getElementById('wFinal');
-  var elNote  = document.getElementById('wNote');
+  var hudScore = document.getElementById('hudScore');
+  var hudBest = document.getElementById('hudBest');
+  var hudSticks = document.getElementById('hudSticks');
+  var hudWorms = document.getElementById('hudWorms');
+  var hudLives = document.getElementById('hudLives');
+  var startOverlay = document.getElementById('startOverlay');
+  var overOverlay = document.getElementById('overOverlay');
+  var finalScore = document.getElementById('finalScore');
+  var finalBreak = document.getElementById('finalBreak');
+  var finalNote = document.getElementById('finalNote');
 
   function resize(){
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     var r = cvs.getBoundingClientRect();
     W = r.width; H = r.height;
-    cvs.width = Math.round(W * dpr); cvs.height = Math.round(H * dpr);
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    cell = Math.min(W / COLS, H / ROWS);
+    cvs.width = Math.round(W*dpr); cvs.height = Math.round(H*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
   }
-  window.addEventListener('resize', function(){ resize(); draw(0); });
+  window.addEventListener('resize', function(){ resize(); if(state !== 'playing') draw(); });
 
-  function offX(){ return (W - cell * COLS) / 2; }
-  function offY(){ return (H - cell * ROWS) / 2; }
-
-  function placeFood(){
-    var free = [];
-    for(var y=0;y<ROWS;y++) for(var x=0;x<COLS;x++){
-      var taken = false;
-      for(var i=0;i<worm.length;i++) if(worm[i].x===x && worm[i].y===y){ taken = true; break; }
-      if(!taken) free.push({x:x,y:y});
-    }
-    food = free.length ? free[Math.floor(Math.random()*free.length)] : null;
-    if(food) food.tilt = (Math.random()-.5) * 1.2;
-  }
+  function edgeW(){ return Math.max(24, W*0.12); }
+  function kidW(){ return Math.max(20, Math.min(38, W*0.065)); }
 
   function reset(){
-    worm = [{x:9,y:7},{x:8,y:7},{x:7,y:7}];
-    for(var i=0;i<worm.length;i++){ worm[i].px = worm[i].x; worm[i].py = worm[i].y; }
-    dir = {x:1,y:0}; queued = null;
-    score = 0; tickMs = 200; acc = 0; pop = [];
-    placeFood(); hud();
+    player = { x:W/2, tx:W/2, w:kidW(), h:kidW()*1.6, y:H*0.75 };
+    hazards = []; finds = []; particles = []; dust = [];
+    speed = 3.0; score = 0; sticks = 0; worms = 0; lives = 3;
+    invuln = 0; shake = 0; spawnTimer = 0; groundOffset = 0; edgeOffset = 0; runPhase = 0; wiggle = 0;
+    updateHud();
   }
-
-  function hud(){
-    elScore.textContent = score;
-    elBest.textContent = best;
-    elLen.textContent = worm.length;
+  function updateHud(){
+    hudScore.textContent = Math.floor(score);
+    hudBest.textContent = Math.floor(best);
+    hudSticks.textContent = sticks;
+    hudWorms.textContent = worms;
+    var hearts = hudLives.querySelectorAll('i');
+    for(var i=0;i<hearts.length;i++) hearts[i].classList.toggle('lost', i >= lives);
   }
-
-  function setDir(nx, ny){
-    if(state !== 'playing') return;
-    var base = queued || dir;
-    if(nx === -base.x && ny === -base.y) return;   /* no instant reverse */
-    queued = {x:nx, y:ny};
+  function spawn(){
+    var ew = edgeW(), minX = ew + 8, maxX = W - ew - 8, span = maxX - minX;
+    var roll = Math.random();
+    if(roll < 0.30){ var bw = span*(0.3 + Math.random()*0.24); hazards.push({type:'bramble',w:bw,h:16,x:minX+Math.random()*(span-bw),y:-40}); }
+    else if(roll < 0.55){ hazards.push({type:'nettle',w:30,h:34,x:minX+Math.random()*(span-30),y:-40}); }
+    else if(roll < 0.68){ hazards.push({type:'stump',w:34,h:34,x:minX+Math.random()*(span-34),y:-40}); }
+    else if(roll < 0.88){ finds.push({type:'stick',w:26,h:10,x:minX+Math.random()*(span-26),y:-30,rot:(Math.random()-.5)*1.2}); }
+    else { finds.push({type:'worm',w:22,h:14,x:minX+Math.random()*(span-22),y:-30,ph:Math.random()*6}); }
+    if(Math.random() < 0.5){ finds.push({type:'stick',w:26,h:10,x:minX+Math.random()*(span-26),y:-30-Math.random()*130,rot:(Math.random()-.5)*1.2}); }
   }
-
-  function step(){
-    if(queued){ dir = queued; queued = null; }
-    var head = worm[0];
-    var nx = (head.x + dir.x + COLS) % COLS;
-    var ny = (head.y + dir.y + ROWS) % ROWS;
-
-    for(var i=0;i<worm.length-1;i++){
-      if(worm[i].x === nx && worm[i].y === ny){ over(); return; }
-    }
-
-    for(var j=0;j<worm.length;j++){ worm[j].px = worm[j].x; worm[j].py = worm[j].y; }
-    worm.unshift({x:nx, y:ny, px:nx - dir.x, py:ny - dir.y});
-
-    if(food && nx === food.x && ny === food.y){
-      score++;
-      pop.push({x:nx, y:ny, life:1});
-      tickMs = Math.max(92, tickMs - 4);
-      placeFood();
-    } else {
-      worm.pop();
-    }
-    hud();
+  function burst(x,y,color,n,spread){
+    for(var i=0;i<n;i++){ particles.push({x:x,y:y,vx:(Math.random()-.5)*spread,vy:(Math.random()-.5)*spread-1,life:1,color:color,r:1.5+Math.random()*2.5}); }
   }
-
-  function over(){
+  function hit(){
+    if(invuln > 0) return;
+    lives--; invuln = 90; shake = 14;
+    burst(player.x, player.y, '#8a6b45', 20, 6);
+    updateHud();
+    if(lives <= 0) gameOver();
+  }
+  function gameOver(){
     state = 'over';
-    if(score > best) best = score;
-    elFinal.textContent = score;
-    elNote.textContent = score < 5 ? 'Short but memorable.'
-      : score < 15 ? 'A respectable amount of sticks.'
-      : score < 30 ? "That's a well-fed worm."
-      : 'Frankly, that worm has had enough.';
-    ovOver.classList.remove('hidden');
-    hud();
+    if(score > best) best = Math.floor(score);
+    var s = Math.floor(score);
+    finalScore.textContent = s;
+    finalBreak.textContent = sticks + (sticks===1?' stick · ':' sticks · ') + worms + (worms===1?' worm':' worms');
+    finalNote.textContent = s < 400 ? 'The brambles win this round.' : s < 1200 ? 'A decent haul. You can do better.' : s < 2500 ? "Now that's a proper forage." : 'Frankly, show-off behaviour.';
+    overOverlay.classList.remove('hidden');
+    updateHud();
   }
-
   function start(){
     resize(); reset();
     state = 'playing';
-    last = performance.now();
-    ovStart.classList.add('hidden');
-    ovOver.classList.add('hidden');
-    if(raf === null) loop(performance.now());
+    startOverlay.classList.add('hidden');
+    overOverlay.classList.add('hidden');
+    if(rafId === null) loop();
   }
-  document.getElementById('wStartBtn').addEventListener('click', start);
-  document.getElementById('wRetry').addEventListener('click', start);
+  document.getElementById('startBtn').addEventListener('click', start);
+  document.getElementById('retryBtn').addEventListener('click', start);
 
-  /* controls */
   window.addEventListener('keydown', function(e){
     if(state !== 'playing') return;
     var k = e.key.toLowerCase();
-    if(k === 'arrowup'    || k === 'w'){ setDir(0,-1); e.preventDefault(); }
-    if(k === 'arrowdown'  || k === 's'){ setDir(0, 1); e.preventDefault(); }
-    if(k === 'arrowleft'  || k === 'a'){ setDir(-1,0); e.preventDefault(); }
-    if(k === 'arrowright' || k === 'd'){ setDir( 1,0); e.preventDefault(); }
+    if(k==='arrowleft'||k==='a'){ keys.left = true; e.preventDefault(); }
+    if(k==='arrowright'||k==='d'){ keys.right = true; e.preventDefault(); }
   });
-  document.querySelectorAll('.pad button').forEach(function(b){
-    b.addEventListener('click', function(){
-      var d = b.getAttribute('data-dir');
-      if(d==='up') setDir(0,-1);
-      if(d==='down') setDir(0,1);
-      if(d==='left') setDir(-1,0);
-      if(d==='right') setDir(1,0);
-    });
+  window.addEventListener('keyup', function(e){
+    var k = e.key.toLowerCase();
+    if(k==='arrowleft'||k==='a') keys.left = false;
+    if(k==='arrowright'||k==='d') keys.right = false;
   });
-  var sx = 0, sy = 0;
-  cvs.addEventListener('pointerdown', function(e){ sx = e.clientX; sy = e.clientY; });
-  cvs.addEventListener('pointerup', function(e){
-    var dx = e.clientX - sx, dy = e.clientY - sy;
-    if(Math.abs(dx) < 24 && Math.abs(dy) < 24) return;
-    if(Math.abs(dx) > Math.abs(dy)) setDir(dx > 0 ? 1 : -1, 0);
-    else setDir(0, dy > 0 ? 1 : -1);
-  });
+  function pointerMove(e){ if(state !== 'playing' || !pointerActive) return; player.tx = e.clientX - cvs.getBoundingClientRect().left; }
+  cvs.addEventListener('pointerdown', function(e){ if(state !== 'playing') return; pointerActive = true; cvs.setPointerCapture(e.pointerId); pointerMove(e); });
+  cvs.addEventListener('pointermove', pointerMove);
+  cvs.addEventListener('pointerup', function(){ pointerActive = false; });
+  cvs.addEventListener('pointercancel', function(){ pointerActive = false; });
 
-  var gio = new IntersectionObserver(function(en){
-    en.forEach(function(e){ inView = e.isIntersecting; if(inView) last = performance.now(); });
-  }, {threshold:0.15});
-  gio.observe(cvs);
+  var gameIO = new IntersectionObserver(function(en){ en.forEach(function(e){ inView = e.isIntersecting; }); }, {threshold:0.15});
+  gameIO.observe(cvs);
 
-  /* draw */
-  function drawStick(cx, cy, s, tilt){
+  function update(){
+    var ew = edgeW();
+    var minX = ew + player.w/2, maxX = W - ew - player.w/2;
+    if(keys.left) player.tx -= 8.5;
+    if(keys.right) player.tx += 8.5;
+    player.tx = Math.max(minX, Math.min(maxX, player.tx));
+    player.x += (player.tx - player.x) * 0.22;
+    player.x = Math.max(minX, Math.min(maxX, player.x));
+    speed = Math.min(9.0, speed + 0.0018);
+    score += speed * 0.09;
+    groundOffset = (groundOffset + speed) % 60;
+    edgeOffset = (edgeOffset + speed) % 90;
+    runPhase += speed * 0.09;
+    wiggle += 0.16;
+    if(invuln > 0) invuln--;
+    if(shake > 0) shake *= 0.88;
+    spawnTimer -= speed;
+    if(spawnTimer <= 0){ spawn(); spawnTimer = 100 + Math.random()*70; }
+    if(Math.random() < 0.5){ dust.push({x:player.x+(Math.random()-.5)*player.w*0.8,y:player.y+player.h*0.45,life:1}); }
+    var i,o,f,p;
+    for(i=hazards.length-1;i>=0;i--){
+      o = hazards[i]; o.y += speed;
+      if(o.y > H + 80){ hazards.splice(i,1); continue; }
+      if(invuln <= 0 && player.x-player.w*0.3 < o.x+o.w && player.x+player.w*0.3 > o.x && player.y-player.h*0.3 < o.y+o.h && player.y+player.h*0.35 > o.y){ hit(); hazards.splice(i,1); }
+    }
+    for(i=finds.length-1;i>=0;i--){
+      f = finds[i]; f.y += speed;
+      if(f.y > H + 40){ finds.splice(i,1); continue; }
+      var dx = (f.x+f.w/2)-player.x, dy = (f.y+f.h/2)-player.y;
+      if(dx*dx + dy*dy < Math.pow(player.w*0.8,2)){
+        if(f.type==='stick'){ sticks++; score += 10; burst(f.x+f.w/2,f.y+f.h/2,'#c9a06a',8,4); }
+        else { worms++; score += 30; burst(f.x+f.w/2,f.y+f.h/2,'#dd8b78',11,5); }
+        finds.splice(i,1); updateHud();
+      }
+    }
+    for(i=particles.length-1;i>=0;i--){ p = particles[i]; p.x+=p.vx; p.y+=p.vy; p.vy+=0.12; p.life-=0.026; if(p.life<=0) particles.splice(i,1); }
+    for(i=dust.length-1;i>=0;i--){ dust[i].y += speed*0.5; dust[i].life -= 0.04; if(dust[i].life<=0) dust.splice(i,1); }
+  }
+
+  function bush(x,y,r,dark){
+    ctx.fillStyle = dark ? '#0c1a10' : '#16301c';
+    ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.arc(x-r*0.6,y+r*0.4,r*0.6,0,Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.arc(x+r*0.6,y+r*0.3,r*0.55,0,Math.PI*2); ctx.fill();
+  }
+
+  function draw(){
+    if(!W || !H) resize();
     ctx.save();
-    ctx.translate(cx, cy); ctx.rotate(tilt || 0);
-    ctx.strokeStyle = '#a8763c'; ctx.lineCap = 'round';
-    ctx.lineWidth = Math.max(3, s*0.17);
-    ctx.beginPath(); ctx.moveTo(-s*0.34, s*0.1); ctx.lineTo(s*0.34, -s*0.1); ctx.stroke();
-    ctx.lineWidth = Math.max(2, s*0.12);
-    ctx.beginPath(); ctx.moveTo(s*0.05, 0); ctx.lineTo(s*0.24, s*0.26); ctx.stroke();
-    ctx.beginPath(); ctx.moveTo(-s*0.12, s*0.04); ctx.lineTo(-s*0.28, -s*0.24); ctx.stroke();
+    if(shake > 0.4) ctx.translate((Math.random()-.5)*shake,(Math.random()-.5)*shake);
+    var ew = edgeW();
+    var g = ctx.createLinearGradient(0,0,0,H);
+    g.addColorStop(0,'#2c3d22'); g.addColorStop(1,'#1a2716');
+    ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
+
+    ctx.fillStyle = 'rgba(180,150,80,0.10)';
+    for(var ly = -60 + groundOffset; ly < H+60; ly += 60){
+      for(var lx = ew + 20; lx < W - ew; lx += 74){
+        var jitter = ((lx*7 + Math.floor(ly/60)*13) % 30) - 15;
+        ctx.beginPath(); ctx.ellipse(lx+jitter, ly+(lx%23), 7, 3.5, (lx%5), 0, Math.PI*2); ctx.fill();
+      }
+    }
+    ctx.fillStyle = '#0f2113';
+    ctx.fillRect(0,0,ew,H); ctx.fillRect(W-ew,0,ew,H);
+    ctx.fillStyle = 'rgba(138,169,87,0.25)';
+    ctx.fillRect(ew-3,0,3,H); ctx.fillRect(W-ew,0,3,H);
+    for(var by = -90 + edgeOffset; by < H+90; by += 45){ bush(ew*0.45, by, ew*0.42, false); bush(W-ew*0.45, by+22, ew*0.38, true); }
+
+    for(var i=0;i<dust.length;i++){ ctx.fillStyle = 'rgba(160,140,95,'+(dust[i].life*0.3)+')'; ctx.beginPath(); ctx.arc(dust[i].x,dust[i].y,3*dust[i].life+1,0,Math.PI*2); ctx.fill(); }
+
+    for(i=0;i<finds.length;i++){
+      var fd = finds[i];
+      if(fd.type === 'stick'){
+        ctx.save(); ctx.translate(fd.x+fd.w/2, fd.y+fd.h/2); ctx.rotate(fd.rot);
+        ctx.strokeStyle='#c9a06a'; ctx.lineWidth=5; ctx.lineCap='round';
+        ctx.beginPath(); ctx.moveTo(-fd.w/2,0); ctx.lineTo(fd.w/2,0); ctx.stroke();
+        ctx.lineWidth=3; ctx.beginPath(); ctx.moveTo(2,0); ctx.lineTo(fd.w/2-2,-6); ctx.stroke();
+        ctx.restore();
+      } else {
+        ctx.save(); ctx.translate(fd.x+fd.w/2, fd.y+fd.h/2);
+        ctx.strokeStyle='#dd8b78'; ctx.lineWidth=5; ctx.lineCap='round';
+        ctx.beginPath();
+        for(var s=0;s<=10;s++){ var t=s/10, xx=-fd.w/2+t*fd.w, yy=Math.sin(t*Math.PI*2+wiggle+(fd.ph||0))*4; if(s===0) ctx.moveTo(xx,yy); else ctx.lineTo(xx,yy); }
+        ctx.stroke(); ctx.restore();
+      }
+    }
+
+    for(i=0;i<hazards.length;i++){
+      var o = hazards[i];
+      if(o.type === 'bramble'){
+        ctx.strokeStyle='#4a3626'; ctx.lineWidth=5; ctx.lineCap='round';
+        ctx.beginPath();
+        for(var b=0;b<=12;b++){ var bt=b/12, bx=o.x+bt*o.w, by2=o.y+Math.sin(bt*Math.PI*3)*6+8; if(b===0) ctx.moveTo(bx,by2); else ctx.lineTo(bx,by2); }
+        ctx.stroke();
+        ctx.fillStyle='#5e4630';
+        for(var th=0; th<o.w; th+=18){ ctx.beginPath(); ctx.moveTo(o.x+th,o.y+6); ctx.lineTo(o.x+th+4,o.y-2); ctx.lineTo(o.x+th+8,o.y+6); ctx.closePath(); ctx.fill(); }
+      } else if(o.type === 'nettle'){
+        ctx.fillStyle='#3f6b32';
+        for(var n=0;n<5;n++){ var nx=o.x+(n%3)*10+4, ny=o.y+Math.floor(n/3)*13+8; ctx.beginPath(); ctx.moveTo(nx,ny+10); ctx.lineTo(nx-6,ny-2); ctx.lineTo(nx,ny-8); ctx.lineTo(nx+6,ny-2); ctx.closePath(); ctx.fill(); }
+        ctx.strokeStyle='#2b4a22'; ctx.lineWidth=2; ctx.beginPath(); ctx.moveTo(o.x+15,o.y+34); ctx.lineTo(o.x+15,o.y+8); ctx.stroke();
+      } else {
+        ctx.fillStyle='#6b4d31'; ctx.beginPath(); ctx.arc(o.x+o.w/2,o.y+o.h/2,o.w/2,0,Math.PI*2); ctx.fill();
+        ctx.strokeStyle='#543c26'; ctx.lineWidth=2;
+        ctx.beginPath(); ctx.arc(o.x+o.w/2,o.y+o.h/2,o.w/3.2,0,Math.PI*2); ctx.stroke();
+        ctx.beginPath(); ctx.arc(o.x+o.w/2,o.y+o.h/2,o.w/6,0,Math.PI*2); ctx.stroke();
+      }
+    }
+
+    if(player){
+      var flash = invuln > 0 && Math.floor(invuln/5)%2 === 0;
+      ctx.save(); ctx.translate(player.x, player.y); ctx.globalAlpha = flash ? 0.35 : 1;
+      var w = player.w, h = player.h;
+      var legSwing = Math.sin(runPhase)*w*0.28;
+      ctx.strokeStyle='#2b3d2a'; ctx.lineWidth=Math.max(3,w*0.13); ctx.lineCap='round';
+      ctx.beginPath(); ctx.moveTo(-w*0.13,h*0.16); ctx.lineTo(-w*0.13+legSwing,h*0.48); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(w*0.13,h*0.16); ctx.lineTo(w*0.13-legSwing,h*0.48); ctx.stroke();
+      ctx.fillStyle='#c15f3f';
+      ctx.beginPath(); ctx.moveTo(-w*0.34,h*0.2); ctx.quadraticCurveTo(-w*0.42,-h*0.22,0,-h*0.26); ctx.quadraticCurveTo(w*0.42,-h*0.22,w*0.34,h*0.2); ctx.closePath(); ctx.fill();
+      ctx.fillStyle='#8a5a3a'; ctx.beginPath(); ctx.ellipse(0,-h*0.02,w*0.2,h*0.16,0,0,Math.PI*2); ctx.fill();
+      ctx.fillStyle='#3f6b32'; ctx.beginPath(); ctx.arc(0,-h*0.42,w*0.27,0,Math.PI*2); ctx.fill();
+      ctx.fillStyle='#dfa049'; ctx.beginPath(); ctx.arc(0,-h*0.46,w*0.16,Math.PI,0); ctx.fill();
+      ctx.restore();
+    }
+
+    for(i=0;i<particles.length;i++){ var pp=particles[i]; ctx.globalAlpha=Math.max(0,pp.life); ctx.fillStyle=pp.color; ctx.beginPath(); ctx.arc(pp.x,pp.y,pp.r,0,Math.PI*2); ctx.fill(); }
+    ctx.globalAlpha = 1;
     ctx.restore();
   }
 
-  function draw(t){
-    if(!W || !H) resize();
-    var ox = offX(), oy = offY();
-
-    ctx.fillStyle = '#1b1209';
-    ctx.fillRect(0,0,W,H);
-
-    /* soil bed */
-    ctx.fillStyle = '#2c1e12';
-    ctx.fillRect(ox, oy, cell*COLS, cell*ROWS);
-    ctx.fillStyle = 'rgba(246,240,226,.045)';
-    for(var y=0;y<ROWS;y++) for(var x=0;x<COLS;x++){
-      if((x+y) % 2 === 0) ctx.fillRect(ox + x*cell, oy + y*cell, cell, cell);
-    }
-    ctx.strokeStyle = 'rgba(242,194,48,.35)'; ctx.lineWidth = 2;
-    ctx.strokeRect(ox, oy, cell*COLS, cell*ROWS);
-
-    /* food */
-    if(food) drawStick(ox + (food.x+.5)*cell, oy + (food.y+.5)*cell, cell, food.tilt);
-
-    /* worm */
-    if(worm){
-      var pts = [];
-      for(var i=0;i<worm.length;i++){
-        var s = worm[i];
-        var gx = s.px + (s.x - s.px) * t;
-        var gy = s.py + (s.y - s.py) * t;
-        if(Math.abs(s.x - s.px) > 1.5) gx = s.x;
-        if(Math.abs(s.y - s.py) > 1.5) gy = s.y;
-        pts.push({ x: ox + (gx+.5)*cell, y: oy + (gy+.5)*cell });
-      }
-      ctx.lineJoin = 'round'; ctx.lineCap = 'round';
-      ctx.strokeStyle = '#d98a92'; ctx.lineWidth = cell*0.72;
-      var run = [pts[0]];
-      for(var k=1;k<pts.length;k++){
-        var d = Math.hypot(pts[k].x - pts[k-1].x, pts[k].y - pts[k-1].y);
-        if(d > cell*1.6){ strokeRun(run); run = [pts[k]]; }
-        else run.push(pts[k]);
-      }
-      strokeRun(run);
-
-      /* segment rings */
-      ctx.strokeStyle = 'rgba(120,60,66,.5)'; ctx.lineWidth = 2;
-      for(var m=1;m<pts.length;m++){
-        ctx.beginPath();
-        ctx.arc(pts[m].x, pts[m].y, cell*0.30, 0, Math.PI*2);
-        ctx.stroke();
-      }
-
-      /* head */
-      var h = pts[0];
-      ctx.fillStyle = '#e0989f';
-      ctx.beginPath(); ctx.arc(h.x, h.y, cell*0.40, 0, Math.PI*2); ctx.fill();
-      var ex = dir.x * cell*0.13, ey = dir.y * cell*0.13;
-      var px = -dir.y * cell*0.15, py = dir.x * cell*0.15;
-      ctx.fillStyle = '#241a10';
-      ctx.beginPath(); ctx.arc(h.x + ex + px, h.y + ey + py, cell*0.075, 0, Math.PI*2); ctx.fill();
-      ctx.beginPath(); ctx.arc(h.x + ex - px, h.y + ey - py, cell*0.075, 0, Math.PI*2); ctx.fill();
-    }
-
-    /* score pops */
-    for(var p=pop.length-1;p>=0;p--){
-      var q = pop[p];
-      q.life -= 0.03;
-      if(q.life <= 0){ pop.splice(p,1); continue; }
-      ctx.globalAlpha = Math.max(0, q.life);
-      ctx.fillStyle = '#f2c230';
-      ctx.font = '700 ' + Math.round(cell*0.55) + 'px Bricolage Grotesque, sans-serif';
-      ctx.textAlign = 'center';
-      ctx.fillText('+1', ox + (q.x+.5)*cell, oy + (q.y+.5)*cell - (1-q.life)*cell*1.2);
-      ctx.globalAlpha = 1;
-    }
+  function loop(){
+    rafId = requestAnimationFrame(loop);
+    if(state === 'playing' && inView && !document.hidden) update();
+    draw();
+    if(state === 'playing') updateHud();
   }
 
-  function strokeRun(run){
-    if(run.length < 2){
-      if(run.length === 1){
-        ctx.beginPath();
-        ctx.arc(run[0].x, run[0].y, cell*0.36, 0, Math.PI*2);
-        ctx.fillStyle = '#d98a92'; ctx.fill();
-      }
-      return;
-    }
-    ctx.beginPath();
-    ctx.moveTo(run[0].x, run[0].y);
-    for(var i=1;i<run.length;i++) ctx.lineTo(run[i].x, run[i].y);
-    ctx.stroke();
-  }
-
-  function loop(now){
-    raf = requestAnimationFrame(loop);
-    var dt = now - last; last = now;
-    if(state === 'playing' && inView && !document.hidden){
-      acc += dt;
-      while(acc >= tickMs){ acc -= tickMs; if(state === 'playing') step(); }
-    } else {
-      acc = 0;
-    }
-    draw(state === 'playing' ? Math.min(acc / tickMs, 1) : 1);
-  }
-
-  resize(); reset(); draw(1);
-  var boot = new IntersectionObserver(function(en){
-    en.forEach(function(e){
-      if(e.isIntersecting && raf === null){ resize(); reset(); last = performance.now(); loop(performance.now()); }
-    });
-  }, {threshold:0.1});
-  boot.observe(cvs);
+  resize(); reset(); draw();
+  var bootIO = new IntersectionObserver(function(en){ en.forEach(function(e){ if(e.isIntersecting && rafId === null){ resize(); reset(); loop(); } }); }, {threshold:0.1});
+  bootIO.observe(cvs);
 })();
 </script>
 
