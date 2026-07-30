@@ -2,7 +2,7 @@
 <html lang="en-GB">
 <head>
 <meta charset="UTF-8">
-<meta name="google-site-verification" content="bCcujEKrOKT5YFsEDGta7O7ck1eaa83F4Dy9r0tSuuk">
+<meta name="google-site-verification" content="z2pxjDXvWo7CoA_wL8sCiMuXtHlvb6VANZbjreoQs-E">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="A home ed forest school in Blackburn for ages 4–14, plus a summer holiday club in Rochdale. Fires, dens, bushcraft and mud, led by a qualified Forest School leader.">
 <meta property="og:title" content="Sticks and Worms — Forest School, Blackburn & Rochdale">
@@ -44,7 +44,7 @@
   html{scroll-behavior:smooth;scroll-padding-top:88px;}
   body{background:var(--paper);color:var(--ink);font-family:var(--sans);overflow-x:hidden;position:relative;line-height:1.55;}
   body::after{content:'';position:fixed;inset:0;z-index:200;pointer-events:none;opacity:.04;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:140px 140px;}
-  @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}.leaf,.scroll-cue{display:none !important;}.canopy-layer{transform:none !important;}.marquee-track{animation:none !important;}.marquee-track .copy2{display:none !important;}.hero-bg-video{display:none !important;}}
+  @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}.leaf,.scroll-cue{display:none !important;}.canopy-layer{transform:none !important;}.marquee-track{animation:none !important;}.marquee-track .copy2{display:none !important;}}
   a{color:inherit;text-decoration:none;}
   ::selection{background:var(--amber);color:var(--forest-deep);}
   :focus-visible{outline:2px solid var(--clay);outline-offset:3px;}
@@ -85,18 +85,30 @@
   @media (min-width:921px){.mobile-menu{display:none;}}
   @media (max-width:920px){nav{padding:12px 20px;}.nav-links{display:none;}.nav-right{gap:12px;}.menu-btn{display:flex;}}
 
-  /* HERO */
+  /* HERO & BACKGROUND VIDEO STYLING */
   .hero{position:relative;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(180deg,#1c3a26 0%,var(--forest) 55%,var(--forest-deep) 100%);color:var(--paper);overflow:hidden;}
-  
-  .hero-bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
-  .hero-overlay{position:absolute;inset:0;background:rgba(18,36,26,0.65);z-index:1;pointer-events:none;}
-
+  .hero-bg-video{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transform:translate(-50%, -50%);
+    z-index:0;
+  }
+  .hero-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(18,36,26,0.65);
+    z-index:1;
+  }
   .canopy{position:absolute;inset:0;z-index:1;pointer-events:none;}
   .canopy-layer{position:absolute;left:-5%;width:110%;}
   .canopy-layer svg{width:100%;display:block;}
   .canopy-1{top:0;opacity:.5;}.canopy-2{top:-8px;opacity:.72;}.canopy-3{top:16px;opacity:.95;}
-  .sun{position:absolute;top:8%;right:14%;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,rgba(223,160,73,.4),transparent 68%);pointer-events:none;z-index:1;}
-  .leaf{position:absolute;top:-40px;font-size:1rem;opacity:.8;animation:leafFall linear infinite;filter:drop-shadow(0 2px 3px rgba(0,0,0,.25));z-index:2;}
+  .sun{position:absolute;top:8%;right:14%;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,rgba(223,160,73,.4),transparent 68%);pointer-events:none;}
+  .leaf{position:absolute;top:-40px;font-size:1rem;opacity:.8;animation:leafFall linear infinite;filter:drop-shadow(0 2px 3px rgba(0,0,0,.25));}
   @keyframes leafFall{0%{transform:translate(0,0) rotate(0);}100%{transform:translate(var(--drift,40px),115vh) rotate(330deg);}}
   @media (max-width:600px){.leaf{display:none;}}
   .undergrowth{position:absolute;left:0;right:0;bottom:-2px;z-index:2;pointer-events:none;}
@@ -145,6 +157,7 @@
   .sec-head h2{font-size:clamp(2rem,3.6vw,2.9rem);}
   .sec-head p{margin-top:16px;color:var(--ink-soft);line-height:1.65;font-size:1rem;}
 
+  /* poster framing */
   .framed{background:#fff;padding:12px;border-radius:14px;box-shadow:0 26px 54px -26px rgba(18,36,26,.55);display:block;}
   .framed img{width:100%;height:auto;display:block;border-radius:6px;}
 
@@ -385,75 +398,56 @@
 
 <div id="progress"></div>
 
-<header>
-  <nav>
-    <a href="#" class="nav-mark">
-      <span>Sticks &amp; Worms</span>
-    </a>
-    <div class="nav-right">
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#sessions">Sessions</a>
-        <a href="#events">Events</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <a href="#contact" class="nav-book">Book Now</a>
-      <button class="menu-btn" aria-label="Toggle Menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
-  <div class="mobile-menu">
-    <a href="#about">About</a>
-    <a href="#sessions">Sessions</a>
-    <a href="#events">Events</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-    <a href="#contact" style="color:var(--amber);font-weight:600;">Book Now &rarr;</a>
+<nav>
+  <div class="nav-mark">
+    <span>Sticks &amp; Worms</span>
   </div>
-</header>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="#about">About Us</a>
+      <a href="#sessions">Sessions</a>
+      <a href="#summer">Summer Club</a>
+      <a href="#homeed">Home Ed</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#booking" class="nav-book">Book Now</a>
+    <button class="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <a href="#about">About Us</a>
+  <a href="#sessions">Sessions</a>
+  <a href="#summer">Summer Club</a>
+  <a href="#homeed">Home Ed</a>
+  <a href="#faq">FAQ</a>
+  <a href="#booking">Book Now</a>
+</div>
 
 <main id="main">
-
-  <!-- HERO SECTION WITH FULL-BLEED BACKGROUND VIDEO -->
+  <!-- HERO SECTION WITH BACKGROUND VIDEO -->
   <section class="hero">
     <video class="hero-bg-video" autoplay muted loop playsinline>
       <source src="background.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
 
-    <div class="canopy" aria-hidden="true">
-      <div class="canopy-layer canopy-1">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0 0c150 50 350 20 500 60s300-10 450 30 250-20 250-20V0H0z" fill="#0c1912"/></svg>
-      </div>
-      <div class="canopy-layer canopy-2">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0 0c200 30 300 70 550 40s400 40 650 10V0H0z" fill="#20402a"/></svg>
-      </div>
-    </div>
-
-    <div class="sun" aria-hidden="true"></div>
-
     <div class="wrap hero-inner">
-      <div class="eyebrow">
-        <span class="full">FOREST SCHOOL &bull; BLACKBURN &amp; ROCHDALE</span>
+      <span class="eyebrow">
+        <span class="full">FOREST SCHOOL &amp; OUTDOOR ADVENTURE</span>
         <span class="short">FOREST SCHOOL</span>
-      </div>
+      </span>
       <div class="h-title">
-        <span class="l1"><span class="word">Wild Play &amp;</span></span>
-        <span class="l2"><span class="word">Woodland Learning</span></span>
+        <span class="l1"><span class="word">Sticks</span> <span class="word">&amp;</span> <span class="word">Worms</span></span>
+        <span class="l2"><span class="word">Nature Network</span></span>
       </div>
-      <p class="hero-sub">Fires, dens, bushcraft and mud. A home ed forest school for ages 4–14 in Blackburn, plus a summer holiday club in Rochdale.</p>
+      <p class="hero-sub">Fires, dens, bushcraft, and mud. A vibrant home ed forest school in Blackburn for ages 4–14, plus exciting summer holiday clubs.</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn-primary">Explore Sessions</a>
+        <a href="#booking" class="btn-primary">Explore Sessions &amp; Book</a>
         <a href="#about" class="btn-ghost">Learn More &rarr;</a>
       </div>
-    </div>
-
-    <div class="undergrowth" aria-hidden="true">
-      <svg viewBox="0 0 1200 80" preserveAspectRatio="none"><path d="M0 80c100-40 220-10 350-45s280 25 420-15 280 30 430-10v70H0z" fill="#f2ece0"/></svg>
     </div>
 
     <div class="scroll-cue">
@@ -462,503 +456,469 @@
     </div>
   </section>
 
-  <!-- MARQUEE -->
+  <!-- MARQUEE BANNER -->
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <span>FIRE LIGHTING &bull; DEN BUILDING &bull; BUSHCRAFT &bull; SLACKLINES &bull; TOOL USE &bull; WILD WOODLAND PLAY &bull; COOKING ON FIRES</span>
-      <span class="copy2">FIRE LIGHTING &bull; DEN BUILDING &bull; BUSHCRAFT &bull; SLACKLINES &bull; TOOL USE &bull; WILD WOODLAND PLAY &bull; COOKING ON FIRES</span>
+      <span>FIRE LIGHTING &bull; DEN BUILDING &bull; BUSHCRAFT &bull; MUD KITCHENS &bull; WOODLAND CRAFTS &bull; SLACKLINES &bull; WILD PLAY &bull; TOOL USE &bull;</span>
+      <span class="copy2">FIRE LIGHTING &bull; DEN BUILDING &bull; BUSHCRAFT &bull; MUD KITCHENS &bull; WOODLAND CRAFTS &bull; SLACKLINES &bull; WILD PLAY &bull; TOOL USE &bull;</span>
     </div>
   </div>
 
-  <!-- FACTS -->
+  <!-- QUICK FACTS -->
   <section class="facts">
     <div class="wrap">
       <div class="fact">
         <b>4–14</b>
-        <span>Age range welcome</span>
+        <span>Ages Welcomed</span>
+      </div>
+      <div class="fact">
+        <b>Level 3</b>
+        <span>Qualified Leadership</span>
+      </div>
+      <div class="fact">
+        <b>2 Sites</b>
+        <span>Blackburn &amp; Rochdale</span>
       </div>
       <div class="fact">
         <b>100%</b>
-        <span>Outdoors in all seasons</span>
-      </div>
-      <div class="fact">
-        <b>L3</b>
-        <span>Qualified Forest Leader</span>
-      </div>
-      <div class="fact">
-        <b>CIC</b>
-        <span>Community Interest Co.</span>
+        <span>Outdoors &amp; Child-Led</span>
       </div>
     </div>
   </section>
 
-  <!-- VALUES / CREED -->
+  <!-- VALUES SECTION -->
   <section class="values" id="values">
-    <div class="wrap values-grid">
-      <div>
-        <span class="kicker">OUR ETHOS</span>
-        <h2>Rooted in <em>child-led</em> freedom</h2>
-        <p class="values-lead">We believe children thrive when given space to explore, manage real risks, and connect with nature on their own terms.</p>
-        <div class="stamp">
-          <div class="ring">100%<br>WILD</div>
-          <div class="st-txt"><b>Sticks &amp; Worms Nature Network CIC</b><br>Non-profit woodland learning</div>
+    <div class="wrap">
+      <div class="values-grid">
+        <div>
+          <span class="kicker">OUR ETHOS</span>
+          <h2>Where wild play builds <em>resilience</em> and confidence.</h2>
+          <p class="values-lead">We believe children learn best when given freedom to explore, take managed risks, and connect with nature at their own rhythm.</p>
+          <div class="stamp">
+            <div class="ring">CIC</div>
+            <div class="st-txt"><b>Community Interest Company</b><br>Rooted in North West nature</div>
+          </div>
         </div>
+        <ul class="creed">
+          <li>
+            <h3>Child-Led Freedom</h3>
+            <p>No rigid schedules. Children direct their own learning, choosing between bushcraft tools, hammock lounging, or deep mud creation.</p>
+          </li>
+          <li>
+            <h3>Risk &amp; Resourcefulness</h3>
+            <p>Safely handling real tools and real fires fosters deep self-trust, problem-solving skills, and bodily awareness.</p>
+          </li>
+          <li>
+            <h3>Community Connection</h3>
+            <p>A welcoming space for home-educated families to make lasting friendships and feel truly understood.</p>
+          </li>
+        </ul>
       </div>
-      <ul class="creed">
-        <li>
-          <h3>Risk &amp; Resilience</h3>
-          <p>Supervised tool use, fire lighting, and climbing build real confidence and self-reliance.</p>
-        </li>
-        <li>
-          <h3>Child-Led Discovery</h3>
-          <p>No forced structures or rigid timetables. Play, curiosity, and imagination guide every session.</p>
-        </li>
-        <li>
-          <h3>All-Weather Community</h3>
-          <p>Rain, wind, or shine — we embrace every season with warm fires, shelters, and hot drinks.</p>
-        </li>
-      </ul>
     </div>
   </section>
 
-  <!-- SESSIONS -->
+  <!-- SESSIONS SECTION -->
   <section class="sessions" id="sessions">
     <div class="wrap">
       <div class="sec-head">
         <span class="kicker">WHAT WE DO</span>
-        <h2>Hands-on woodland adventures</h2>
-        <p>Every session offers a mix of guided skill-building and unrestricted free play in the woods.</p>
+        <h2>Woodland activities that ignite curiosity.</h2>
+        <p>Every session blends structured skill-sharing with open-ended outdoor exploration.</p>
       </div>
-
       <div class="activity-grid">
         <div class="activity">
           <div class="glyph">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
           </div>
-          <h3>Bushcraft &amp; Tools</h3>
-          <p>Using whittling knives, palm drills, and bow saws safely to craft items from greenwood.</p>
+          <h3>Fire &amp; Outdoor Cooking</h3>
+          <p>Flint &amp; steel techniques, campfire safety, and making woodland treats together.</p>
         </div>
-
         <div class="activity">
           <div class="glyph">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 0-10 10c0 5.25 7 10 10 10s10-4.75 10-10A10 10 0 0 0 12 2z"/></svg>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14"/></svg>
           </div>
-          <h3>Fire Skills &amp; Cooking</h3>
-          <p>Striking sparkers, gathering tinder, and cooking woodland treats over open campfires.</p>
+          <h3>Den &amp; Shelter Building</h3>
+          <p>Tarp setups, natural timber shelters, rope knots, and teamwork in action.</p>
         </div>
-
         <div class="activity">
           <div class="glyph">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14"/></svg>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
           </div>
-          <h3>Den Building</h3>
-          <p>Constructing shelters and forts using branches, tarps, ropes, and natural materials.</p>
+          <h3>Green Woodworking</h3>
+          <p>Using whittling knives, billhooks, and hand drills to carve wooden crafts safely.</p>
         </div>
-
         <div class="activity">
           <div class="glyph">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 12h18"/></svg>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 3v18m9-9H3"/></svg>
           </div>
-          <h3>Ropes &amp; Slacklines</h3>
-          <p>Navigating slacklines, rope swings, and tree climbs to develop balance and physical confidence.</p>
+          <h3>Slacklines &amp; Hammocks</h3>
+          <p>Developing balance, physical confidence, and quiet spaces to rest under canopy.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- INTERACTIVE MINI GAME -->
-  <section class="game-section">
+  <!-- MINI GAME SECTION -->
+  <section class="game-section" id="game">
     <div class="wrap">
       <div class="game-head">
         <span class="kicker">WOODLAND MINI-GAME</span>
-        <h2>Stick &amp; Worm <em>Challenger</em></h2>
-        <p>Gather fallen sticks and rescue woodland worms while dodging rolling boulders in the forest!</p>
+        <h2>Collect the <em>Sticks</em> &amp; find the <em>Worms</em>!</h2>
+        <p>Guide your forest explorer using arrow keys, WASD, or on-screen touch dragging. Avoid prickly brambles!</p>
       </div>
-
       <div class="game-shell">
         <div class="game-hud">
           <div class="hud-group">
-            <span>SCORE: <b class="hud-val" id="scoreVal">0</b></span>
-            <span>WORMS: <b class="hud-val worm" id="wormVal">0</b></span>
+            <span>STICKS: <b class="hud-val" id="hudSticks">0</b></span>
+            <span>WORMS: <b class="hud-val worm" id="hudWorms">0</b></span>
           </div>
           <div class="hud-group">
-            <span>LIVES:</span>
-            <div class="hud-lives" id="livesContainer">
-              <i></i><i></i><i></i>
-            </div>
+            <span>SCORE: <b class="hud-val" id="hudScore">0</b></span>
+            <div class="hud-lives" id="hudLives"><i></i><i></i><i></i></div>
           </div>
         </div>
-
         <div class="game-canvas-wrap">
           <canvas id="gameCanvas"></canvas>
+          <div class="game-overlay" id="gameOverlay">
+            <h3>Ready for a <em>Woodland Run</em>?</h3>
+            <p>Collect sticks and worms while dodging bramble hazards!</p>
+            <span class="keys">Desktop: Arrow Keys / WASD | Mobile: Drag finger</span>
+            <button class="game-btn" id="startBtn">Start Playing</button>
+          </div>
+        </div>
+        <div class="game-foot">Use your keyboard or touch screen to move around the forest canvas.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUMMER CLUB SECTION -->
+  <section class="events" id="summer">
+    <div class="wrap">
+      <div class="ev-grid">
+        <div class="ev-copy">
+          <span class="kicker">HOLIDAY CLUB</span>
+          <h2>Summer Woodland <em>Adventures</em> in Rochdale</h2>
+          <p class="ev-where"><strong>Location:</strong> Rochdale Site (Full address provided on booking)</p>
           
-          <div class="game-overlay" id="startOverlay">
-            <h3>Ready for the <em>Woods</em>?</h3>
-            <p>Use Arrow Keys / WASD or drag your finger on mobile to move your forest explorer.</p>
-            <span class="keys">Collect Sticks (+10) &bull; Rescue Worms (+25) &bull; Avoid Rocks</span>
-            <button class="game-btn" id="startBtn">Start Adventure</button>
+          <div class="ev-haf">
+            <b>HAF Funded Places Available:</b> Free spaces with warm meals provided for eligible families via local council HAF programs.
           </div>
 
-          <div class="game-overlay hidden" id="endOverlay">
-            <h3>Game Over!</h3>
-            <div class="final-score" id="finalScoreVal">0</div>
-            <div class="final-break" id="finalBreakdown">Sticks: 0 | Worms: 0</div>
-            <p class="final-note">Great effort out in the wild!</p>
-            <div class="overlay-actions">
-              <button class="game-btn" id="restartBtn">Play Again</button>
+          <div class="ev-dates">
+            <div class="ev-date">
+              <span class="m">AUG</span>
+              <span class="d">04</span>
+            </div>
+            <div class="ev-date">
+              <span class="m">AUG</span>
+              <span class="d">11</span>
+            </div>
+            <div class="ev-date">
+              <span class="m">AUG</span>
+              <span class="d">18</span>
+            </div>
+            <div class="ev-date">
+              <span class="m">AUG</span>
+              <span class="d">25</span>
             </div>
           </div>
-        </div>
 
-        <div class="game-foot">
-          <span>Move with WASD / Arrow Keys or Touch Drag</span>
+          <div class="ev-acts">
+            <span>Water Games</span>
+            <span>Campfire Cooking</span>
+            <span>Den Building</span>
+            <span>Bug Hunting</span>
+            <span>Wood Crafts</span>
+          </div>
+
+          <div class="ev-actions">
+            <a href="#booking" class="btn-primary">Book Summer Club</a>
+          </div>
+        </div>
+        <div class="ev-poster">
+          <div class="ev-ages">Ages 4–14</div>
+          <div class="framed">
+            <img src="poster.jpeg" alt="Summer Forest School Poster" loading="lazy">
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- EVENTS -->
-  <section class="events" id="events">
-    <div class="wrap ev-grid">
-      <div class="ev-copy">
-        <span class="kicker">UPCOMING SPECIAL EVENT</span>
-        <h2>Summer Holiday <em>Club</em></h2>
-        <div class="ev-where">Rochdale Woodland Location &bull; Ages 5–12</div>
-        
-        <div class="ev-haf">
-          <b>Free Places Available:</b> HAF funded places available for eligible families via local council support.
-        </div>
-
-        <div class="ev-dates">
-          <div class="ev-date">
-            <span class="m">AUG</span>
-            <span class="d">04</span>
-          </div>
-          <div class="ev-date">
-            <span class="m">AUG</span>
-            <span class="d">11</span>
-          </div>
-          <div class="ev-date">
-            <span class="m">AUG</span>
-            <span class="d">18</span>
-          </div>
-          <div class="ev-date">
-            <span class="m">AUG</span>
-            <span class="d">25</span>
-          </div>
-        </div>
-
-        <div class="ev-acts">
-          <span>Fire lighting</span>
-          <span>Campfire snacks</span>
-          <span>Bushcraft</span>
-          <span>Water play</span>
-          <span>Hammocks</span>
-        </div>
-
-        <div class="ev-actions">
-          <a href="#contact" class="btn-primary">Book Summer Club</a>
-        </div>
-      </div>
-
-      <div class="ev-poster">
-        <div class="ev-ages">Ages 5–12</div>
-        <div class="framed">
-          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80" alt="Woodland canopy with sunlight streaming through leaves">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOME ED -->
+  <!-- HOME ED SECTION -->
   <section class="homeed" id="homeed">
     <div class="wrap">
       <div class="sec-head">
         <span class="kicker">HOME EDUCATION</span>
-        <h2>Blackburn Home Ed Forest School</h2>
-        <p>Weekly term-time sessions designed specifically for home-educated children and young people.</p>
+        <h2>Weekly Home Ed Gatherings in Blackburn</h2>
+        <p>Running regularly at Canalside Activity and Environment Centre on Bonsall Street.</p>
       </div>
-
       <div class="he-cards">
         <div class="he-card">
-          <span class="tag">LOCATION &amp; TIME</span>
-          <h3>Canalside Centre, Blackburn</h3>
-          <p>Fridays during term time. Set in a secluded woodland ecosystem right next to the canal in Mill Hill.</p>
+          <span class="tag">REGULAR MEETUPS</span>
+          <h3>Thursdays &amp; Fridays</h3>
+          <p>Consistent, term-time sessions designed specifically around home-educated learning rhythms and socialization.</p>
         </div>
-
         <div class="he-card">
-          <span class="tag">AGE GROUPS</span>
-          <h3>Ages 4 to 14</h3>
-          <p>Mixed-age community where older children mentor younger ones and everyone works together organically.</p>
+          <span class="tag">COMMUNITY</span>
+          <h3>Parent &amp; Child Space</h3>
+          <p>Parents can stay and connect with like-minded home ed families, share resources, and relax around the fire.</p>
         </div>
-
         <div class="he-card">
-          <span class="tag">FLEXIBLE BOOKING</span>
-          <h3>Block or Drop-In</h3>
-          <p>Book full term blocks via Eequ or enquire for individual session availability.</p>
+          <span class="tag">INCLUSIVE</span>
+          <h3>All Abilities Welcomed</h3>
+          <p>Child-centered approach accommodating neurodivergent learners, sensory needs, and self-directed activity paths.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- REVIEWS -->
+  <!-- REVIEWS SECTION -->
   <section class="reviews">
     <div class="wrap">
       <span class="kicker">TESTIMONIALS</span>
-      <h2>What parents &amp; kids say</h2>
+      <h2>What parents and carers say about us.</h2>
 
       <div class="rev-feature">
-        <blockquote>"My son comes home muddy, exhausted, and buzzing with excitement every single week. It's the highlight of our home-ed timetable."</blockquote>
-        <cite>&mdash; Sarah M., Blackburn Parent</cite>
+        <blockquote>"My children have grown so much in confidence since joining. Fires, muddy boots, and absolute freedom to learn at their own pace."</blockquote>
+        <cite>&mdash; Home Ed Parent, Blackburn</cite>
       </div>
 
       <div class="rev-pair">
         <div class="rev-card">
           <div class="stars">&starf;&starf;&starf;&starf;&starf;</div>
-          <p>"The freedom to manage their own risks with real tools and fire has transformed my daughter's self-confidence."</p>
-          <cite>&mdash; David K., Rochdale</cite>
+          <p>"The best day of the week for my kids. The leader's calm and supportive approach makes every child feel valued and capable."</p>
+          <cite>&mdash; Parent Participant</cite>
         </div>
-
         <div class="rev-card">
           <div class="stars">&starf;&starf;&starf;&starf;&starf;</div>
-          <p>"A truly welcoming space for neurodivergent children. No pressure, just pure nature and supportive leaders."</p>
-          <cite>&mdash; Emma T., Home Educator</cite>
+          <p>"Finding a place where my neurodivergent son could just BE without pressure has been life-changing for our family."</p>
+          <cite>&mdash; Home Ed Carer</cite>
         </div>
       </div>
 
-      <div class="rev-note">
-        Read more verified parent reviews on our <a href="https://eequ.org/book/blackburn-home-ed-forest-school-july-2026-with-sticks-and-worms-6901" target="_blank" rel="noopener">Eequ booking page &rarr;</a>
-      </div>
+      <div class="rev-note">Read more updates and parent notes on our <a href="https://www.instagram.com/sticksandwormsforestschool" target="_blank" rel="noopener">Instagram Page</a>.</div>
     </div>
   </section>
 
   <!-- ABOUT LEADER -->
   <section class="about" id="about">
-    <div class="wrap about-grid">
-      <div class="about-photo">
-        <div class="framed">
-          <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Forest school leader in woodland">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-photo">
+          <div class="framed">
+            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80" alt="Woodland Leader in Forest" loading="lazy">
+          </div>
+          <div class="cap">Level 3 Qualified Forest School Leader</div>
         </div>
-        <div class="cap">Level 3 Forest Leader</div>
-      </div>
+        <div>
+          <span class="kicker">ABOUT THE LEADER</span>
+          <h2>Passionate about <em>nature</em>, play, and child wellbeing.</h2>
+          <div class="about-copy">
+            <p>Hello! I am a fully qualified Level 3 Forest School Practitioner with years of experience leading child-led outdoor learning in the North West.</p>
+            <p>Sticks and Worms Nature Network CIC was created to offer a safe, grounding space where children can build physical skills, forge strong friendships, and cultivate a deep relationship with the natural world.</p>
+          </div>
 
-      <div>
-        <span class="kicker">MEET THE LEADER</span>
-        <h2>Passionate about <em>outdoor freedom</em></h2>
-        <div class="about-copy">
-          <p>Hello! I'm the founder and leader at <strong>Sticks and Worms Nature Network CIC</strong>. With years of experience leading outdoor learning and bushcraft, my passion is giving children space to discover their true capabilities.</p>
-          <p>Forest School isn't just about playing outside — it's a holistic learning process that supports emotional intelligence, practical problem solving, and deep nature connection.</p>
-        </div>
+          <div class="care">
+            <h3>Safety &amp; Qualifications</h3>
+            <ul>
+              <li>Level 3 Forest School Leader Certification</li>
+              <li>Outdoor First Aid Certified</li>
+              <li>Enhanced DBS Cleared</li>
+              <li>Fully Insured CIC Entity</li>
+            </ul>
+          </div>
 
-        <div class="care">
-          <h3>Safety &amp; Qualifications</h3>
-          <ul>
-            <li>Level 3 Forest School Leader Certification</li>
-            <li>Outdoor First Aid Certified (16-hour)</li>
-            <li>Enhanced DBS Checked &amp; Fully Insured</li>
-            <li>Comprehensive risk assessments for all sites and tools</li>
-          </ul>
-        </div>
-
-        <div class="fave">&ldquo;There is no bad weather, only unsuitable clothing!&rdquo;</div>
-
-        <div class="creds">
-          <span>L3 FS Leader</span>
-          <span>Outdoor First Aid</span>
-          <span>Enhanced DBS</span>
-          <span>Food Hygiene L2</span>
+          <div class="creds">
+            <span>DBS CHECKS</span>
+            <span>OUTDOOR FIRST AID</span>
+            <span>LEVEL 3 FS LEADER</span>
+            <span>INSURED</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BEFORE YOU VISIT -->
+  <!-- WHAT TO BRING -->
   <section class="before">
     <div class="wrap">
       <div class="sec-head">
         <span class="kicker">PREPARATION</span>
-        <h2>What to wear &amp; bring</h2>
-        <p>Being warm and comfortable makes all the difference in the woods!</p>
+        <h2>What to wear and bring to sessions.</h2>
+        <p>There is no bad weather, only unprepared clothing!</p>
       </div>
 
       <div class="before-steps">
         <div class="bstep">
           <h3>1. Layer Up</h3>
-          <p>Multiple thin layers are better than one thick coat. Thermal base layers work wonders in winter.</p>
+          <p>Thermal base layers, warm jumpers, and waterproof outer jackets and trousers in all seasons.</p>
         </div>
-
         <div class="bstep">
-          <h3>2. Waterproofs</h3>
-          <p>Waterproof jacket and overtrousers are essential, even if rain isn't forecast!</p>
+          <h3>2. Robust Footwear</h3>
+          <p>Wellies or sturdy waterproof hiking boots with thick warm socks.</p>
         </div>
-
         <div class="bstep">
-          <h3>3. Robust Footwear</h3>
-          <p>Wellies with thick socks, or sturdy waterproof hiking boots with good grip.</p>
+          <h3>3. Spare Clothes</h3>
+          <p>A complete change of dry clothing kept in a plastic bag inside their backpack.</p>
         </div>
-
         <div class="bstep alert">
-          <h3>4. Spare Clothes</h3>
-          <p>Always pack a full change of clothes (including socks!) in a dry plastic bag.</p>
+          <h3>4. Drinks &amp; Snacks</h3>
+          <p>A refillable water bottle and healthy snacks (please avoid nut products).</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROVIDED & CHECKLIST -->
+  <!-- WHAT WE PROVIDE -->
   <section class="provided">
-    <div class="wrap prov-grid">
-      <div class="prov-block">
-        <h2>What we provide</h2>
-        <p>We supply all tools, equipment, shelter, safety gear, and campfire snacks.</p>
-        <ul class="checklist">
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Hand tools &amp; gloves</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Tarps &amp; shelters</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Cooking gear</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Campfire snacks</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Warm drinks</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>First aid supplies</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="prov-block">
-        <h2>What to pack in backpack</h2>
-        <p>A quick mental checklist for your child's bag before leaving home.</p>
-        <div class="badges">
-          <span>Refillable water bottle</span>
-          <span>Packed lunch</span>
-          <span>Spare warm socks</span>
-          <span>Full change of clothes</span>
-          <span>Sun hat / Woolly hat</span>
-          <span>Sunscreen (summer)</span>
+    <div class="wrap">
+      <div class="prov-grid">
+        <div class="prov-block">
+          <h2>What We Provide</h2>
+          <p>All specialist bushcraft equipment, tools, shelter tarps, and campfire snacks are supplied during sessions.</p>
+          <ul class="checklist">
+            <li>
+              <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+              Bushcraft Tools
+            </li>
+            <li>
+              <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+              Safety Gear
+            </li>
+            <li>
+              <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+              Campfire Snacks
+            </li>
+            <li>
+              <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+              First Aid Kit
+            </li>
+          </ul>
+        </div>
+        <div class="prov-block">
+          <h2>Core Learning Skills</h2>
+          <p>Children gain practical hands-on experience through safe, supervised risk-taking.</p>
+          <div class="badges">
+            <span>TOOL SAFETY</span>
+            <span>KNOT TYING</span>
+            <span>FIRE SAFELY</span>
+            <span>FLORA IDENTIFICATION</span>
+            <span>TEAMWORK</span>
+            <span>RISK ASSESSMENT</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MAP / FIND US -->
-  <section class="findus" id="map">
+  <!-- MAP / LOCATION -->
+  <section class="findus">
     <div class="wrap">
       <span class="kicker">LOCATION</span>
       <div class="map-head">
-        <h2>Canalside Activity Centre</h2>
-        <div class="addr">Bonsall Street, Mill Hill, Blackburn, BB2 4DD</div>
+        <h2>Canalside Activity &amp; Environment Centre</h2>
+        <div class="addr">Bonsall Street, Mill Hill,<br>Blackburn, BB2 4DD</div>
       </div>
 
       <div class="map-frame">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2358.823483920152!2d-2.5028!3d53.7385!2m3!1f0!0f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b9e0231ffffff%3A0x1!2sBonsall%20St%2C%20Mill%20Hill%2C%20Blackburn%20BB2%204DD!5e0!3m2!1sen!2suk!4v1680000000000!5m2!1sen!2suk" allowfullscreen="" loading="lazy" title="Canalside Activity Centre Map"></iframe>
+        <iframe title="Map showing Canalside Activity and Environment Centre" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2358.384606214217!2d-2.502931223243163!3d53.73831894600216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487ba2df4868d667%3A0xc3b8eb57fa3c563d!2sCanalside%20Activity%20and%20Environment%20Centre!5e0!3m2!1sen!2suk!4v1710000000000!5m2!1sen!2suk" loading="lazy" allowfullscreen></iframe>
       </div>
 
       <div class="map-actions">
-        <a href="https://maps.google.com/?q=Bonsall+Street,+Mill+Hill,+Blackburn+BB2+4DD" target="_blank" rel="noopener" class="map-btn">Get Directions &rarr;</a>
+        <a href="https://maps.google.com/?q=Canalside+Activity+and+Environment+Centre+Blackburn" target="_blank" rel="noopener" class="map-btn">Get Google Maps Directions &rarr;</a>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- FAQ & BOOKING SECTION -->
   <section class="faq" id="faq">
-    <div class="wrap faq-grid">
-      <div class="booking-box">
-        <h3>How to Book</h3>
-        <p>All regular term bookings are processed securely online via Eequ.</p>
-        <p>For custom enquiries, birthday parties, or school visits, drop us an email or message directly.</p>
-        <div class="fineprint">
-          Cancelation policy: Full details on Eequ booking page. Sessions run in most weather conditions except dangerous high winds or lightning.
-        </div>
-      </div>
-
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-q">
-            <span>What happens if it rains heavily?</span>
-            <span class="chev">+</span>
-          </button>
-          <div class="faq-a">
-            <p>We embrace the rain! We put up large tarps to create dry shelter spaces around the campfire. As long as children are dressed in proper waterproofs, rain adds to the fun with mud kitchens and puddle play.</p>
+    <div class="wrap">
+      <div class="faq-grid">
+        <div class="booking-box" id="booking">
+          <h3>Book Your Sessions</h3>
+          <p>Our bookings are securely handled online through the Eequ platform.</p>
+          <a href="https://eequ.org/book/blackburn-home-ed-forest-school-july-2026-with-sticks-and-worms-6901" target="_blank" rel="noopener" class="btn-primary" style="display:block;text-align:center;">Book via Eequ Platform &rarr;</a>
+          <div class="fineprint">
+            <p>Advance booking is required for all sessions to ensure appropriate adult-to-child supervision ratios.</p>
           </div>
         </div>
 
-        <div class="faq-item">
-          <button class="faq-q">
-            <span>Do parents stay or drop off?</span>
-            <span class="chev">+</span>
-          </button>
-          <div class="faq-a">
-            <p>For home ed sessions, parents of younger children (ages 4–6) are welcome to stay and join in. Older children can be dropped off once they feel settled and confident in the woodland environment.</p>
-          </div>
-        </div>
+        <div>
+          <span class="kicker">FREQUENTLY ASKED QUESTIONS</span>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-q">
+                <span>What age groups can participate?</span>
+                <span class="chev">+</span>
+              </button>
+              <div class="faq-a">
+                <p>Our sessions are tailored for children aged 4 to 14. Activities are scalable so younger children can enjoy sensory nature play while older kids learn complex bushcraft skills.</p>
+              </div>
+            </div>
 
-        <div class="faq-item">
-          <button class="faq-q">
-            <span>Are sessions suitable for neurodivergent children?</span>
-            <span class="chev">+</span>
-          </button>
-          <div class="faq-a">
-            <p>Yes! Outdoor forest school environments are naturally low-pressure and sensory-rich. Children can choose their level of participation, retreat to quiet spaces when needed, or focus deeply on whittling and building.</p>
-          </div>
-        </div>
+            <div class="faq-item">
+              <button class="faq-q">
+                <span>Do parents need to stay during sessions?</span>
+                <span class="chev">+</span>
+              </button>
+              <div class="faq-a">
+                <p>For Home Ed sessions, parents are welcome to stay, socialise, or assist their children. For Holiday Clubs, drop-off arrangements can be confirmed upon booking.</p>
+              </div>
+            </div>
 
-        <div class="faq-item">
-          <button class="faq-q">
-            <span>What food is provided on site?</span>
-            <span class="chev">+</span>
-          </button>
-          <div class="faq-a">
-            <p>We regularly cook campfire snacks such as toasted marshmallows, damper bread, or hot soup. Dietary requirements and allergies are collected during booking and fully catered for.</p>
+            <div class="faq-item">
+              <button class="faq-q">
+                <span>What happens if it rains?</span>
+                <span class="chev">+</span>
+              </button>
+              <div class="faq-a">
+                <p>We embrace rainy days! We set up large shelter tarps and get cozy around the campfire. Sessions are only cancelled in extreme unsafe weather conditions such as high winds.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q">
+                <span>How does HAF funding work for the Summer Club?</span>
+                <span class="chev">+</span>
+              </button>
+              <div class="faq-a">
+                <p>HAF (Holiday Activities and Food) places are fully funded for children receiving benefits-tested free school meals. Contact your local council or check our booking link for details.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT / FOOTER CTA -->
+  <!-- CONTACT CTA -->
   <section class="cta" id="contact">
     <div class="wrap">
       <div class="cta-head">
-        <h2>Ready to join us in <em>the woods</em>?</h2>
-        <p>Get in touch or book your child's spot online today.</p>
+        <h2>Get in touch with <em>Sticks &amp; Worms</em></h2>
+        <p>Have questions about home ed groups, holiday clubs, or accessibility? We'd love to hear from you.</p>
       </div>
 
       <div class="contact-grid">
         <div class="contact-card">
-          <span class="k">BOOKING PORTAL</span>
-          <span class="v">Eequ Booking Page</span>
-          <a href="https://eequ.org/book/blackburn-home-ed-forest-school-july-2026-with-sticks-and-worms-6901" target="_blank" rel="noopener" class="link-out">Book Online &rarr;</a>
-        </div>
-
-        <div class="contact-card">
           <span class="k">EMAIL US</span>
-          <span class="v">sticksworms.naturenetwork<br>@gmail.com</span>
+          <span class="v">sticksworms.naturenetwork@gmail.com</span>
           <a href="mailto:sticksworms.naturenetwork@gmail.com" class="link-out">Send Email &rarr;</a>
         </div>
-
         <div class="contact-card">
-          <span class="k">PHONE / WHATSAPP</span>
+          <span class="k">CALL / TEXT</span>
           <span class="v">+44 7546 066128</span>
-          <a href="tel:+447546066128" class="link-out">Call Leader &rarr;</a>
+          <a href="tel:+447546066128" class="link-out">Call Now &rarr;</a>
+        </div>
+        <div class="contact-card">
+          <span class="k">INSTAGRAM</span>
+          <span class="v">@sticksandwormsforestschool</span>
+          <a href="https://www.instagram.com/sticksandwormsforestschool" target="_blank" rel="noopener" class="link-out">View Instagram &rarr;</a>
         </div>
       </div>
     </div>
   </section>
-
 </main>
 
 <footer>
@@ -967,21 +927,34 @@
   </div>
   <div class="socials">
     <a href="https://www.instagram.com/sticksandwormsforestschool" target="_blank" rel="noopener">Instagram</a>
-    <a href="https://eequ.org/book/blackburn-home-ed-forest-school-july-2026-with-sticks-and-worms-6901" target="_blank" rel="noopener">Eequ</a>
+    <a href="https://eequ.org/book/blackburn-home-ed-forest-school-july-2026-with-sticks-and-worms-6901" target="_blank" rel="noopener">Eequ Booking</a>
   </div>
 </footer>
 
 <div class="book-bar">
-  <a href="#contact">Book Forest School Sessions &rarr;</a>
+  <a href="https://eequ.org/book/blackburn-home-ed-forest-school-july-2026-with-sticks-and-worms-6901" target="_blank" rel="noopener">Book Sessions Online</a>
 </div>
 
 <script>
-  // Hide Preloader
+  // Preloader Logic
   window.addEventListener('load', () => {
-    const pl = document.getElementById('preload');
-    if (pl) {
-      pl.classList.add('done');
-      setTimeout(() => pl.style.display = 'none', 600);
+    const preloader = document.getElementById('preload');
+    if(preloader) preloader.classList.add('done');
+  });
+
+  // Reading Progress Bar
+  window.addEventListener('scroll', () => {
+    const winScroll = document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const progress = document.getElementById('progress');
+    if(progress) progress.style.width = scrolled + '%';
+
+    // Show mobile sticky booking bar after scrolling past hero
+    const bookBar = document.querySelector('.book-bar');
+    if(bookBar) {
+      if(winScroll > 400) bookBar.classList.add('show');
+      else bookBar.classList.remove('show');
     }
   });
 
@@ -990,10 +963,11 @@
   const mobileMenu = document.querySelector('.mobile-menu');
   if (menuBtn && mobileMenu) {
     menuBtn.addEventListener('click', () => {
-      const open = menuBtn.getAttribute('aria-expanded') === 'true';
-      menuBtn.setAttribute('aria-expanded', !open);
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', !expanded);
       mobileMenu.classList.toggle('open');
     });
+
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         menuBtn.setAttribute('aria-expanded', 'false');
@@ -1002,78 +976,41 @@
     });
   }
 
-  // Scroll Progress Bar & Floating CTA Bar
-  const prog = document.getElementById('progress');
-  const bookBar = document.querySelector('.book-bar');
-  window.addEventListener('scroll', () => {
-    const h = document.documentElement;
-    const st = h.scrollTop || document.body.scrollTop;
-    const sh = h.scrollHeight || document.body.scrollHeight;
-    const pct = (st / (sh - h.clientHeight)) * 100;
-    if (prog) prog.style.width = pct + '%';
-
-    if (bookBar) {
-      if (st > 400) {
-        bookBar.classList.add('show');
-      } else {
-        bookBar.classList.remove('show');
-      }
-    }
-  });
-
-  // Accordion FAQ
-  document.querySelectorAll('.faq-q').forEach(q => {
-    q.addEventListener('click', () => {
-      const item = q.parentElement;
+  // FAQ Accordions
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const btn = item.querySelector('.faq-q');
+    const content = item.querySelector('.faq-a');
+    btn.addEventListener('click', () => {
       const isOpen = item.classList.contains('open');
-      
       document.querySelectorAll('.faq-item').forEach(i => {
         i.classList.remove('open');
-        const ans = i.querySelector('.faq-a');
-        if (ans) ans.style.maxHeight = null;
+        i.querySelector('.faq-a').style.maxHeight = null;
       });
-
-      if (!isOpen) {
+      if(!isOpen) {
         item.classList.add('open');
-        const ans = item.querySelector('.faq-a');
-        if (ans) ans.style.maxHeight = ans.scrollHeight + "px";
+        content.style.maxHeight = content.scrollHeight + 'px';
       }
     });
   });
 
-  // Mini Game Script
-  (function initMiniGame() {
-    const canvas = document.getElementById('gameCanvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
+  // MINI GAME LOGIC
+  const canvas = document.getElementById('gameCanvas');
+  const ctx = canvas ? canvas.getContext('2d') : null;
+  const overlay = document.getElementById('gameOverlay');
+  const startBtn = document.getElementById('startBtn');
 
-    const startOverlay = document.getElementById('startOverlay');
-    const endOverlay = document.getElementById('endOverlay');
-    const startBtn = document.getElementById('startBtn');
-    const restartBtn = document.getElementById('restartBtn');
-
-    const scoreVal = document.getElementById('scoreVal');
-    const wormVal = document.getElementById('wormVal');
-    const livesContainer = document.getElementById('livesContainer');
-    const finalScoreVal = document.getElementById('finalScoreVal');
-    const finalBreakdown = document.getElementById('finalBreakdown');
-
-    let running = false;
-    let animId = null;
-    let score = 0;
-    let wormsRescued = 0;
-    let sticksCollected = 0;
-    let lives = 3;
-
-    let player = { x: 0, y: 0, r: 18, speed: 5 };
+  if(canvas && ctx && overlay && startBtn) {
+    let gameRunning = false;
+    let score = 0, sticks = 0, worms = 0, lives = 3;
+    let player = { x: 0, y: 0, radius: 16, speed: 4 };
     let items = [];
     let keys = {};
 
     function resizeCanvas() {
-      const rect = canvas.parentElement.getBoundingClientRect();
+      const rect = canvas.getBoundingClientRect();
       canvas.width = rect.width;
       canvas.height = rect.height;
-      if (!running) {
+      if(!gameRunning) {
         player.x = canvas.width / 2;
         player.y = canvas.height / 2;
       }
@@ -1084,185 +1021,134 @@
     window.addEventListener('keydown', e => keys[e.key] = true);
     window.addEventListener('keyup', e => keys[e.key] = false);
 
-    // Touch Controls
-    let touching = false;
-    canvas.addEventListener('pointerdown', e => { touching = true; updateTouchPos(e); });
-    canvas.addEventListener('pointermove', e => { if (touching) updateTouchPos(e); });
-    canvas.addEventListener('pointerup', () => touching = false);
-    canvas.addEventListener('pointercancel', () => touching = false);
+    // Touch support for dragging player
+    let isDragging = false;
+    canvas.addEventListener('touchstart', e => {
+      isDragging = true;
+      updateTouchPos(e);
+    });
+    canvas.addEventListener('touchmove', e => {
+      if(isDragging) updateTouchPos(e);
+    });
+    canvas.addEventListener('touchend', () => isDragging = false);
 
     function updateTouchPos(e) {
       const rect = canvas.getBoundingClientRect();
-      player.x = e.clientX - rect.left;
-      player.y = e.clientY - rect.top;
-      clampPlayer();
-    }
-
-    function clampPlayer() {
-      player.x = Math.max(player.r, Math.min(canvas.width - player.r, player.x));
-      player.y = Math.max(player.r, Math.min(canvas.height - player.r, player.y));
+      const touch = e.touches[0];
+      player.x = touch.clientX - rect.left;
+      player.y = touch.clientY - rect.top;
     }
 
     function spawnItem() {
-      if (items.length > 12) return;
+      if(items.length > 8) return;
+      const types = ['stick', 'worm', 'bramble'];
       const rand = Math.random();
-      let type = 'stick';
-      let r = 12;
-
-      if (rand < 0.45) {
-        type = 'stick';
-      } else if (rand < 0.75) {
-        type = 'worm';
-      } else {
-        type = 'rock';
-        r = 16;
-      }
-
+      let type = rand < 0.5 ? 'stick' : (rand < 0.8 ? 'worm' : 'bramble');
       items.push({
         x: Math.random() * (canvas.width - 40) + 20,
         y: Math.random() * (canvas.height - 40) + 20,
-        r: r,
         type: type,
-        vx: (Math.random() - 0.5) * (type === 'rock' ? 2 : 0.5),
-        vy: (Math.random() - 0.5) * (type === 'rock' ? 2 : 0.5)
+        radius: 12
       });
     }
 
-    function updateHUD() {
-      scoreVal.textContent = score;
-      wormVal.textContent = wormsRescued;
-      
-      const dots = livesContainer.querySelectorAll('i');
-      dots.forEach((dot, idx) => {
-        if (idx < lives) {
-          dot.classList.remove('lost');
-        } else {
-          dot.classList.add('lost');
-        }
-      });
-    }
+    function updateGame() {
+      if(!gameRunning) return;
 
-    function startGame() {
-      score = 0;
-      wormsRescued = 0;
-      sticksCollected = 0;
-      lives = 3;
-      items = [];
-      player.x = canvas.width / 2;
-      player.y = canvas.height / 2;
-      running = true;
+      if(keys['ArrowUp'] || keys['w']) player.y -= player.speed;
+      if(keys['ArrowDown'] || keys['s']) player.y += player.speed;
+      if(keys['ArrowLeft'] || keys['a']) player.x -= player.speed;
+      if(keys['ArrowRight'] || keys['d']) player.x += player.speed;
 
-      updateHUD();
-      startOverlay.classList.add('hidden');
-      endOverlay.classList.add('hidden');
+      player.x = Math.max(player.radius, Math.min(canvas.width - player.radius, player.x));
+      player.y = Math.max(player.radius, Math.min(canvas.height - player.radius, player.y));
 
-      for (let i = 0; i < 6; i++) spawnItem();
-      cancelAnimationFrame(animId);
-      loop();
-    }
-
-    function gameOver() {
-      running = false;
-      finalScoreVal.textContent = score;
-      finalBreakdown.textContent = `Sticks: ${sticksCollected} | Worms: ${wormsRescued}`;
-      endOverlay.classList.remove('hidden');
-    }
-
-    function loop() {
-      if (!running) return;
-
-      // Player Movement
-      if (keys['ArrowUp'] || keys['w'] || keys['W']) player.y -= player.speed;
-      if (keys['ArrowDown'] || keys['s'] || keys['S']) player.y += player.speed;
-      if (keys['ArrowLeft'] || keys['a'] || keys['A']) player.x -= player.speed;
-      if (keys['ArrowRight'] || keys['d'] || keys['D']) player.x += player.speed;
-      clampPlayer();
-
-      if (Math.random() < 0.03) spawnItem();
-
-      // Clear Canvas
-      ctx.fillStyle = '#0f1c12';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      // Draw Grid / Grass details
-      ctx.strokeStyle = 'rgba(242, 236, 224, 0.03)';
-      ctx.lineWidth = 1;
-      for (let x = 0; x < canvas.width; x += 40) {
-        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke();
-      }
-      for (let y = 0; y < canvas.height; y += 40) {
-        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke();
-      }
-
-      // Draw Player Explorer
-      ctx.beginPath();
-      ctx.arc(player.x, player.y, player.r, 0, Math.PI * 2);
-      ctx.fillStyle = '#dfa049';
-      ctx.fill();
-      ctx.lineWidth = 3;
-      ctx.strokeStyle = '#f2ece0';
-      ctx.stroke();
-
-      // Update & Draw Items
-      for (let i = items.length - 1; i >= 0; i--) {
+      for(let i = items.length - 1; i >= 0; i--) {
         let it = items[i];
-        it.x += it.vx;
-        it.y += it.vy;
-
-        if (it.x < 10 || it.x > canvas.width - 10) it.vx *= -1;
-        if (it.y < 10 || it.y > canvas.height - 10) it.vy *= -1;
-
-        // Collision Check
-        let dx = player.x - it.x;
-        let dy = player.y - it.y;
-        let dist = Math.hypot(dx, dy);
-
-        if (dist < player.r + it.r) {
-          if (it.type === 'stick') {
-            score += 10;
-            sticksCollected++;
-          } else if (it.type === 'worm') {
-            score += 25;
-            wormsRescued++;
-          } else if (it.type === 'rock') {
+        let dist = Math.hypot(player.x - it.x, player.y - it.y);
+        if(dist < player.radius + it.radius) {
+          if(it.type === 'stick') {
+            sticks++; score += 10;
+          } else if(it.type === 'worm') {
+            worms++; score += 25;
+          } else if(it.type === 'bramble') {
             lives--;
-            updateHUD();
-            if (lives <= 0) {
-              gameOver();
+            updateLivesDisplay();
+            if(lives <= 0) {
+              endGame();
               return;
             }
           }
           items.splice(i, 1);
-          updateHUD();
-          continue;
-        }
-
-        // Draw Items
-        ctx.beginPath();
-        if (it.type === 'stick') {
-          ctx.strokeStyle = '#d2a878';
-          ctx.lineWidth = 4;
-          ctx.moveTo(it.x - 8, it.y + 8);
-          ctx.lineTo(it.x + 8, it.y - 8);
-          ctx.stroke();
-        } else if (it.type === 'worm') {
-          ctx.strokeStyle = '#dd8b78';
-          ctx.lineWidth = 3;
-          ctx.arc(it.x, it.y, 6, 0, Math.PI * 1.5);
-          ctx.stroke();
-        } else if (it.type === 'rock') {
-          ctx.fillStyle = '#5f7f45';
-          ctx.arc(it.x, it.y, it.r, 0, Math.PI * 2);
-          ctx.fill();
+          document.getElementById('hudSticks').textContent = sticks;
+          document.getElementById('hudWorms').textContent = worms;
+          document.getElementById('hudScore').textContent = score;
         }
       }
 
-      animId = requestAnimationFrame(loop);
+      if(Math.random() < 0.04) spawnItem();
+      renderGame();
+      requestAnimationFrame(updateGame);
     }
 
-    if (startBtn) startBtn.addEventListener('click', startGame);
-    if (restartBtn) restartBtn.addEventListener('click', startGame);
-  })();
+    function updateLivesDisplay() {
+      const hearts = document.querySelectorAll('#hudLives i');
+      hearts.forEach((h, idx) => {
+        if(idx >= lives) h.classList.add('lost');
+        else h.classList.remove('lost');
+      });
+    }
+
+    function renderGame() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Player
+      ctx.beginPath();
+      ctx.arc(player.x, player.y, player.radius, 0, Math.PI * 2);
+      ctx.fillStyle = '#dfa049';
+      ctx.fill();
+      ctx.closePath();
+
+      // Items
+      items.forEach(it => {
+        ctx.beginPath();
+        ctx.arc(it.x, it.y, it.radius, 0, Math.PI * 2);
+        if(it.type === 'stick') ctx.fillStyle = '#d2a878';
+        else if(it.type === 'worm') ctx.fillStyle = '#dd8b78';
+        else ctx.fillStyle = '#c15f3f'; // bramble
+        ctx.fill();
+        ctx.closePath();
+      });
+    }
+
+    function startGame() {
+      score = 0; sticks = 0; worms = 0; lives = 3;
+      items = [];
+      document.getElementById('hudSticks').textContent = 0;
+      document.getElementById('hudWorms').textContent = 0;
+      document.getElementById('hudScore').textContent = 0;
+      updateLivesDisplay();
+      gameRunning = true;
+      overlay.classList.add('hidden');
+      updateGame();
+    }
+
+    function endGame() {
+      gameRunning = false;
+      overlay.innerHTML = `
+        <h3>Game Over!</h3>
+        <div class="final-score">Score: ${score}</div>
+        <p class="final-break">Collected ${sticks} Sticks &amp; ${worms} Worms</p>
+        <div class="overlay-actions">
+          <button class="game-btn" onclick="startGame()">Play Again</button>
+        </div>
+      `;
+      overlay.classList.remove('hidden');
+    }
+
+    startBtn.addEventListener('click', startGame);
+    window.startGame = startGame;
+  }
 </script>
 
 </body>
