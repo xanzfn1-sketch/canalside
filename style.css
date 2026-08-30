@@ -2,12 +2,17 @@
     background: var(--paper-2);
     padding: 120px 0;
 }
+.nature-network .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
 .nature-network h2 {
     font-size: clamp(2rem, 3.6vw, 2.9rem);
     margin-bottom: 14px;
     color: var(--pine);
 }
-.nature-network > p {
+.nature-network > .wrap > p {
     max-width: 700px;
     font-size: 1.02rem;
     color: var(--ink-soft);
